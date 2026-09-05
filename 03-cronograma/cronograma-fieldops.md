@@ -2,6 +2,7 @@
 
 **Versão:** 1.0
 **Data:** 2026-08-21
+**Estado:** cronograma legado preservado para rastreabilidade. A data vigente de entrega é o fim de novembro de 2026; consulte [plano atualizado](../planning/mvp.md).
 **Referência de EAP:** `../02-eap/eap-fieldops.md`
 
 ## Como ler este cronograma

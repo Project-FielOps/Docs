@@ -1,0 +1,5 @@
+# Local agent workspaces; do not commit drafts or reusable instructions here.
+skills/
+plans/
+*.json
+*.tar.gz
