@@ -1,1 +1,0 @@
-../_KB/99-reference/diagnostics/discovery.md

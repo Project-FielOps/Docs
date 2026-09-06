@@ -1,1 +1,0 @@
-../_KB/10-quality/quality.md

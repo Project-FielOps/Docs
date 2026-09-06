@@ -1,1 +1,0 @@
-../_KB/03-architecture/data-model.md

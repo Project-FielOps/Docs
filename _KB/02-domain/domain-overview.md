@@ -45,5 +45,5 @@ O domínio do FieldOps gira em torno da gestão de inspeções técnicas em camp
 ## Fontes
 
 - [../../references/base_fieldops/Projeto FieldOps](../../references/base_fieldops/Projeto%20FieldOps)
-- [../01-product/business-rules.md](../01-product/business-rules.md)
-- [../../architecture/data-model.md](../../architecture/data-model.md)
+- [../01-product/product-business-rules.md](../01-product/product-business-rules.md)
+- [../03-architecture/data-model.md](../03-architecture/data-model.md)

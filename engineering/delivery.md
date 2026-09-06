@@ -1,1 +1,0 @@
-../_KB/04-development/delivery.md

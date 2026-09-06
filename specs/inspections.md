@@ -1,1 +1,0 @@
-../_KB/05-api/specs/inspections.md

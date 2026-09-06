@@ -88,4 +88,4 @@ A implementação presente no repositório confirma parte do MVP em backend e pa
 
 - [../../references/base_fieldops/Projeto FieldOps](../../references/base_fieldops/Projeto%20FieldOps)
 - [../01-product/requirements.md](../01-product/requirements.md)
-- [../03-architecture/current-architecture.md](../03-architecture/current-architecture.md)
+- [../03-architecture/system-overview.md](../03-architecture/system-overview.md)

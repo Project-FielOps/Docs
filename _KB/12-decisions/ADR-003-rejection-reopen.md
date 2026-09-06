@@ -38,5 +38,5 @@ Quando a inspeção é reprovada, a correção segue um fluxo explícito de reab
 
 ## References
 
-- [../01-product/business-rules.md](../01-product/business-rules.md)
-- [../../architecture/decisions.md](../../architecture/decisions.md)
+- [../01-product/product-business-rules.md](../01-product/product-business-rules.md)
+- [architecture-decisions.md](architecture-decisions.md)

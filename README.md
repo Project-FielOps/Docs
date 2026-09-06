@@ -15,7 +15,7 @@ Para agentes de IA, leia também [regras de desenvolvimento](_KB/13-ai/DEVELOPME
 
 ## Organização
 
-`_KB/` contém a documentação atual; `references/` contém fontes históricas; `decisions/` contém pendências e evidências; `01-tap/`, `02-eap/` e `03-cronograma/` são artefatos acadêmicos. Os antigos diretórios de categoria são apenas compatibilidade; veja [LEGACY-PATHS.md](LEGACY-PATHS.md). A precedência e manutenção estão em [`_KB/README.md`](_KB/README.md).
+`_KB/` contém a documentação atual; `references/` contém fontes históricas; `decisions/` contém pendências e evidências; `01-tap/`, `02-eap/` e `03-cronograma/` são artefatos acadêmicos. Os antigos diretórios de categoria foram removidos; veja [LEGACY-PATHS.md](LEGACY-PATHS.md). A precedência e manutenção estão em [`_KB/README.md`](_KB/README.md).
 
 | Área | Documento | Uso |
 |---|---|---|

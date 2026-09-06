@@ -1,1 +1,0 @@
-../_KB/11-planning/academic.md

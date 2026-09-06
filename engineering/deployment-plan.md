@@ -1,1 +1,0 @@
-../_KB/08-infrastructure/deployment-plan.md

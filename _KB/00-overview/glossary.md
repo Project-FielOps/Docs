@@ -43,5 +43,5 @@ Este glossário define os termos que devem ser usados de forma consistente em to
 ## Fontes
 
 - [../../references/base_fieldops/Projeto FieldOps](../../references/base_fieldops/Projeto%20FieldOps)
-- [../01-product/business-rules.md](../01-product/business-rules.md)
+- [../01-product/product-business-rules.md](../01-product/product-business-rules.md)
 - [../12-decisions/ADR-001-source-of-truth.md](../12-decisions/ADR-001-source-of-truth.md)

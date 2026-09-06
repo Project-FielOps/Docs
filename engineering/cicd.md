@@ -1,1 +1,0 @@
-../_KB/09-devops/cicd-plan.md

@@ -39,4 +39,4 @@ A documentação original em `base_fieldops` é a fonte normativa completa do pr
 ## References
 
 - [../../references/base_fieldops/Projeto FieldOps](../../references/base_fieldops/Projeto%20FieldOps)
-- [../../knowledge-base/discovery.md](../../knowledge-base/discovery.md)
+- [../99-reference/diagnostics/discovery.md](../99-reference/diagnostics/discovery.md)

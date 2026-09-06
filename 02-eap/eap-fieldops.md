@@ -2,7 +2,7 @@
 
 **Versão:** 1.0
 **Data:** 2026-08-21
-**Estado:** artefato histórico; o plano vigente e a fonte de requisitos estão no [mapa da documentação](../README.md), [diagnóstico](../knowledge-base/discovery.md) e [plano até novembro](../planning/mvp.md).
+**Estado:** artefato histórico; o plano vigente e a fonte de requisitos estão no [mapa da documentação](../README.md), [diagnóstico](../_KB/99-reference/diagnostics/discovery.md) e [plano até novembro](../_KB/11-planning/mvp.md).
 **Artefatos considerados:** especificação funcional (`fieldops-spec.md`), código-fonte e histórico de commits dos repositórios `API` e `interface-administrativa`, READMEs de cada repositório, estrutura da organização GitHub `Project-FielOps`.
 
 A EAP decompõe o escopo total do Projeto FieldOps até o nível de pacotes de trabalho. Cada item indica também o **status atual**, levantado a partir do código e da documentação existentes — não apenas planejado, mas efetivamente verificado.

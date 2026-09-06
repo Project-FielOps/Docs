@@ -54,5 +54,5 @@ Adotar IAM Role + `DefaultCredentialsProvider` garante que a solução seja segu
 
 ## References
 
-- [../../architecture/aws.md](../../architecture/aws.md)
+- [../03-architecture/aws.md](../03-architecture/aws.md)
 - [../../references/base_fieldops/Projeto FieldOps](../../references/base_fieldops/Projeto%20FieldOps)

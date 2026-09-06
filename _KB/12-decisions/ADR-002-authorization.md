@@ -40,4 +40,4 @@ A autorização por perfil e por objeto é regra oficial do MVP. Em caso de dive
 ## References
 
 - [../../references/base_fieldops/Projeto FieldOps](../../references/base_fieldops/Projeto%20FieldOps)
-- [../01-product/business-rules.md](../01-product/business-rules.md)
+- [../01-product/product-business-rules.md](../01-product/product-business-rules.md)

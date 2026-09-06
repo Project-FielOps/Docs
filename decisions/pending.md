@@ -1,6 +1,6 @@
 # Pendências consolidadas do FieldOps
 
-Atualizado em 2026-09-06. Este é o arquivo único para registrar pendências ainda abertas. Decisões aprovadas permanecem em `architecture/decisions.md`; este arquivo registra o que ainda precisa de detalhamento, implementação ou evidência de aceite.
+Atualizado em 2026-09-06. Este é o arquivo único para registrar pendências ainda abertas. Decisões aprovadas permanecem em `_KB/12-decisions/architecture-decisions.md`; este arquivo registra o que ainda precisa de detalhamento, implementação ou evidência de aceite.
 
 ## GAP-013 — evidências e upload — concluído
 
@@ -20,7 +20,7 @@ No desenvolvimento, deve ser utilizado o provider alternativo de `EmailService` 
 
 ## GAP-019 e DEC-013 — sincronização mobile — backend concluído
 
-O backend implementa `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull`, com contrato, limites, idempotência persistida, dependências, conflitos, cursor e autenticação documentados em [`specs/synchronization.md`](../specs/synchronization.md). Testes de replay, autorização, cursor e falha de operação passaram.
+O backend implementa `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull`, com contrato, limites, idempotência persistida, dependências, conflitos, cursor e autenticação documentados em [`specs/synchronization-contract.md`](../_KB/05-api/specs/synchronization-contract.md). Testes de replay, autorização, cursor e falha de operação passaram.
 
 Continuam pendentes apenas a implementação mobile da SQLite/outbox, testes no dispositivo e a resolução administrativa de conflitos no cliente.
 
@@ -44,7 +44,7 @@ Permanecem pendências de governança documental:
 
 ## Infraestrutura AWS e operação
 
-AWS é requisito do projeto e a topologia está definida em [`architecture/aws.md`](../architecture/aws.md). Faltam decisões operacionais e evidências de execução:
+AWS é requisito do projeto e a topologia está definida em [`architecture/aws.md`](../_KB/03-architecture/aws.md). Faltam decisões operacionais e evidências de execução:
 
 - estratégia de IaC e permissões detalhadas para ECR/ECS;
 - região, conta, IaC e orçamento;

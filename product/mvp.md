@@ -1,1 +1,0 @@
-../_KB/01-product/product-mvp.md

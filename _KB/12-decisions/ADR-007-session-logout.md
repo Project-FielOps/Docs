@@ -38,5 +38,5 @@ A política de logout e invalidação de sessão deve ser definida formalmente a
 
 ## References
 
-- [../01-product/business-rules.md](../01-product/business-rules.md)
-- [../../knowledge-base/discovery.md](../../knowledge-base/discovery.md)
+- [../01-product/product-business-rules.md](../01-product/product-business-rules.md)
+- [../99-reference/diagnostics/discovery.md](../99-reference/diagnostics/discovery.md)
