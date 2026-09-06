@@ -10,6 +10,7 @@ Esta é a documentação versionada do FieldOps. A fonte atual para humanos e ag
 4. [Plano de implantação](_KB/08-infrastructure/deployment-plan.md) — sequência para backend, banco, S3 e frontend.
 5. [Plano de CI/CD](_KB/09-devops/cicd-plan.md) — validação local e promoção via GitHub Actions.
 6. [Especificações](_KB/05-api/specs/README.md) — contratos implementáveis por domínio.
+7. [Pendências do backend](_KB/11-planning/backend-pendencies/README.md) — backlog técnico de infraestrutura, CI/CD e aceite operacional.
 
 Para agentes de IA, leia também [regras de desenvolvimento](_KB/13-ai/DEVELOPMENT-RULES.md), [mapa do código](_KB/13-ai/CODEBASE-MAP.md) e [fonte de verdade](_KB/README.md). Ao implementar, diferencie sempre requisito, decisão, estado observado e evidência de validação.
 

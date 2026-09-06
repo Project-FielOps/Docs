@@ -55,16 +55,9 @@ Hierarquia de autoridade:
 - Decisões: [12-decisions/README.md](12-decisions/README.md)
 - Planejamento: [11-planning/roadmap.md](11-planning/roadmap.md)
 
-## Imported Originals (drafts)
+## Fontes originais
 
-- Regras de negócio (import): [Docs/_KB/imports/original-09-regras-de-negocio.md](imports/original-09-regras-de-negocio.md)
-- Modelo de dados (import): [Docs/_KB/imports/original-10-modelo-de-dados.md](imports/original-10-modelo-de-dados.md)
-- API REST (import): [Docs/_KB/imports/original-12-api-rest.md](imports/original-12-api-rest.md)
-- Arquitetura (import): [Docs/_KB/imports/original-11-arquitetura.md](imports/original-11-arquitetura.md)
-- Backlog do Produto (import): [Docs/_KB/imports/original-15-backlog.md](imports/original-15-backlog.md)
-- Roadmap (import): [Docs/_KB/imports/original-16-roadmap.md](imports/original-16-roadmap.md)
-- Critérios de Aceitação (import): [Docs/_KB/imports/original-17-criterios-aceitacao.md](imports/original-17-criterios-aceitacao.md)
-- Exemplo de Ficha (import): [Docs/_KB/imports/original-21-exemplo-ficha.md](imports/original-21-exemplo-ficha.md)
+O inventário e a localização das fontes originais estão em [99-reference/sources/sources.md](99-reference/sources/sources.md). O conteúdo histórico não deve ser tratado como contrato vigente sem passar pela hierarquia de autoridade desta KB.
 
 ## O que está documentado aqui
 
