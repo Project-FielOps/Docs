@@ -36,6 +36,8 @@ Expected correction: ...
 - `CHANGES_REQUIRED`: qualquer `CRITICAL`/`HIGH`; `MEDIUM` que viole aceite; teste obrigatório ou build falhando por causa da mudança; evidência insuficiente para risco alto.
 - `BLOCKED_BY_DOCUMENTATION`: lacuna/conflito normativo permite comportamentos materialmente diferentes e impede julgamento correto.
 
+Erro de compilação em fonte alterado é finding de no mínimo `HIGH`, ainda que um build incremental tenha passado. Ausência de teste direto para um método novo de integração é evidência insuficiente para esse caminho e deve impedir aprovação quando o método participa de contrato, persistência, storage, autenticação ou autorização.
+
 Falha ambiental é registrada separadamente e não vira automaticamente bloqueio documental.
 
 ## Definition of Done
@@ -47,7 +49,7 @@ Falha ambiental é registrada separadamente e não vira automaticamente bloqueio
 - transação, concorrência, migration e privacidade de evidências avaliadas quando aplicáveis;
 - auditoria e erros sem dados sensíveis;
 - testes do requisito e adversariais executados;
-- `mvn test` e `mvn package` passando para backend relevante;
+- `mvn clean test` e `mvn clean package` passando para backend relevante, com evidência de recompilação das classes alteradas;
 - OpenAPI e documentação coerentes;
 - nenhum finding `CRITICAL` ou `HIGH` aberto;
 - relatório e veredito independentes produzidos.

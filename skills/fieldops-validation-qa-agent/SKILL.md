@@ -23,6 +23,14 @@ Compare a mudança com RN/FR/AC, decisões, arquitetura, DTOs, schema, autentica
 
 Revise se os testes do autor realmente provam o requisito. Execute-os e acrescente testes adversariais quando necessário e autorizado pela tarefa. Cubra happy path, negativos, limites, dados ausentes/inválidos, papel incorreto, recurso de outro usuário, estado inválido, exceções, transação, repetição, concorrência e regressão conforme o risco.
 
+### Gates obrigatórios de compilação e cobertura
+
+- Para qualquer mudança relevante no backend, execute uma compilação limpa antes do veredito: `mvn clean test` e `mvn clean package` em `API/`. Não considere suficiente um `mvn test` ou `mvn package` incremental, pois artefatos antigos podem mascarar erros no código-fonte.
+- Registre a saída de compilação e confirme que as classes alteradas foram recompiladas. O texto `Nothing to compile` em uma execução que deveria validar uma mudança relevante exige repetir com `clean` e investigar; não é evidência de sucesso.
+- Para cada método novo ou alterado em adapter, client, storage, gateway, mapper ou controller, identifique um teste que execute diretamente esse caminho. Testar somente outro método da mesma classe, por exemplo upload sem executar download, não valida o método novo.
+- Para cada requisito, mantenha uma matriz explícita `requisito → símbolo/endpoint → teste executado → resultado`. Só declare um cenário como validado quando houver teste executável ou uma inspeção estática claramente identificada; não transforme cobertura pretendida em cobertura realizada.
+- Se a compilação limpa falhar, ou se um método novo relevante não tiver teste direto nem justificativa de risco, o veredito mínimo é `CHANGES_REQUIRED` (ou `BLOCKED_BY_DOCUMENTATION` quando a causa for normativa). Não emitir `APPROVED`/`APPROVED_WITH_WARNINGS` com erro de compilação oculto por cache.
+
 Para segurança, avalie o contexto real: autenticação, autorização por objeto, privilege escalation, IDOR, input/injection, exposição de dados, tokens/secrets, upload/download privado e logs sensíveis. Um scanner, se existir, complementa e não substitui essa análise.
 
 ## Findings e resultado

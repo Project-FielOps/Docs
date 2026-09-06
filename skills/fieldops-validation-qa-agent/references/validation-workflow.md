@@ -22,7 +22,20 @@ Exemplo: mudança em `InspectionService` requer examinar controllers de inspeç�
 - sync: replay, ordem/dependência, falha parcial, conflito, cancelamento e aprovação tardia;
 - auditoria: ator, ação, objeto e valores permitidos sem dados sensíveis.
 
-Execute testes direcionados antes da suíte ampla. Para mudança de backend relevante, use `mvn test`; use `mvn package` como gate de build. Registre exatamente o que não pôde ser executado e por quê.
+### Gate de compilação limpa
+
+Antes de interpretar qualquer resultado de teste, execute no repositório `API/`:
+
+```text
+mvn clean test
+mvn clean package
+```
+
+Use Java 21 e Docker/Testcontainers quando exigidos pelo projeto. Uma execução incremental pode reutilizar bytecode antigo e não detectar erro de compilação em arquivo alterado; portanto, seu resultado não pode ser usado como gate final. Se o comando limpo não puder ser executado, registre a limitação e não trate o build como aprovado.
+
+Depois, confira `git diff --check` e o estado dos artefatos apenas como verificações auxiliares. Não use a ausência de erro em `mvn package -DskipTests` incremental para afirmar que o fonte compila.
+
+Execute testes direcionados antes da suíte ampla. Para cada método novo ou alterado em adapter, client, storage, gateway, mapper ou controller, identifique e execute um teste que percorra diretamente esse método. Testar somente outro método da mesma classe não valida o caminho novo. Registre exatamente o que não pôde ser executado e por quê.
 
 ## Cenários de avaliação da própria skill
 
