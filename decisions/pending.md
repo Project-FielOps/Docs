@@ -44,9 +44,9 @@ Permanecem pendências de governança documental:
 
 ## Infraestrutura AWS e operação
 
-AWS é requisito do projeto, mas a arquitetura ainda é proposta. Faltam decisões operacionais e evidências de execução:
+AWS é requisito do projeto e a topologia está definida em [`architecture/aws.md`](../architecture/aws.md). Faltam decisões operacionais e evidências de execução:
 
-- serviços escolhidos entre ECR/ECS e alternativa equivalente;
+- estratégia de IaC e permissões detalhadas para ECR/ECS;
 - região, conta, IaC e orçamento;
 - ambientes local, homologação e produção;
 - bucket S3 privado, lifecycle, criptografia e política de acesso;

@@ -28,7 +28,7 @@ stateDiagram-v2
 
 ## DEC-008 Prazo e cloud
 
-**Status:** aprovada em 2026-09-05. A entrega acadêmica deve ocorrer até o fim de novembro de 2026. AWS é requisito do projeto. A arquitetura AWS em `aws.md` continua proposta até a equipe escolher serviços, região, conta, IaC e orçamento; nenhum recurso é declarado provisionado sem evidência.
+**Status:** aprovada em 2026-09-06. A entrega acadêmica deve ocorrer até o fim de novembro de 2026. A topologia AWS é Route 53/DNS → ACM → ALB → ECS Fargate, com RDS PostgreSQL, S3, Secrets Manager, CloudWatch, ECR e GitHub Actions. A hospedagem recomendada do frontend é S3 privado + CloudFront. Região, conta, IaC, orçamento e provisionamento efetivo continuam pendentes de evidência; nenhum recurso é declarado provisionado sem comprovação.
 
 ## DEC-009 GPS e QR divergente
 

@@ -1,26 +1,7 @@
-# Infrastructure Overview
+# Infraestrutura — índice
 
-## Requisitos
+O documento operacional da infraestrutura é [Arquitetura AWS](../../architecture/aws.md). A sequência executável está em [Plano de implantação](../../engineering/deployment-plan.md) e a automação em [CI/CD](../../engineering/cicd.md).
 
-- Provisionamento em AWS (requisito obrigatório);
-- Storage de objeto para evidências (S3);
-- Ambientes: dev, staging, prod;
-- IaC recomendada (terraform, cloudformation ou equivalente);
-- Observability: logs centralizados e métricas.
+Este arquivo mantém apenas o ponto de entrada da base de conhecimento para evitar duas descrições divergentes da mesma topologia. A arquitetura definida usa Route 53, ACM, ALB, ECS Fargate, RDS PostgreSQL, S3, Secrets Manager, CloudWatch, ECR e GitHub Actions. O frontend tem hospedagem recomendada em S3 privado + CloudFront.
 
-## Componentes
-
-- API (EC2/ECS/EKS/whatever);
-- PostgreSQL (RDS ou equivalente);
-- Storage S3 para evidências;
-- CDN/opção de distribuição para downloads de evidências;
-- Secrets manager para credenciais;
-- CI/CD pipeline para deploy.
-
-## Observação
-
-A infraestrutura precisa ser documentada e provisionada; o workspace atual não contém infraestrutura provisionada.
-
-## Referências
-
-- [../12-decisions/ADR-005-aws-storage.md](../12-decisions/ADR-005-aws-storage.md)
+Estado: desenho definido; recursos AWS e IaC ainda exigem evidência de provisionamento.

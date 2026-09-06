@@ -1,18 +1,5 @@
-# CI/CD
+# CI/CD — índice
 
-## Recomendações
+O plano único de CI/CD está em [engineering/cicd.md](../../engineering/cicd.md). Ele cobre testes locais, GitHub Actions, OIDC, ECR, ECS, S3, CloudFront e smoke tests.
 
-- pipeline com lint, build, testes unitários e integração;
-- deploy automatizado para dev/staging/prod;
-- migrações Flyway automáticas com validação pré-deploy;
-- jobs para backup e verificação de integridade de evidências.
-
-## Observações
-
-- configurar variáveis secretas em providers e não no repositório;
-- rodar testes de integração com Testcontainers em pipeline para garantir comportamento do banco.
-
-## Referências
-
-- `API/pom.xml`;
-- pipeline a ser definido e documentado em `Docs/_KB/09-devops/deployment.md`.
+Não existe workflow GitHub Actions ou IaC versionada neste workspace. Esta distinção é intencional: o plano não deve ser confundido com automação já implementada.
