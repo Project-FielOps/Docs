@@ -1,0 +1,50 @@
+source,suggested_target,rationale,action
+base_fieldops/Projeto FieldOps 3022594f77cf8233a662814f75a0600f.md,99-reference/legacy/origin.md,Top-level index of the original project; keep as legacy copy and reference it in KB,copied_to_KB
+base_fieldops/Projeto FieldOps/22 Anexo D - Diagrama de Classe 61c2594f77cf82fca91181faa441f15d.md,03-architecture/diagrams/class-diagram.md,Class diagram belongs to architecture diagrams; move to diagrams folder and reference,copied_to_KB
+base_fieldops/Projeto FieldOps/21 - Anexo C - Exemplo de Ficha de Inspeção e412594f77cf82c08b5001559bf8694b.md,99-reference/examples/ficha-de-inspecao.md,Example inspection form is a reference/example (legacy),copied_to_KB
+base_fieldops/Projeto FieldOps/20 - Anexo B - Decisões de escopo consolidadas c122594f77cf8347a70481f32a7fb230.md,12-decisions/decisions-scope.md,Scope decisions belong under ADRs/decisions; import as proposed decisions,copied_to_KB
+base_fieldops/Projeto FieldOps/20 - Anexo A - Checklist executivo do projeto 83f2594f77cf83a694b901baee9a38a1.md,99-reference/legacy/checklist-executive.md,Legacy checklist; archive as reference,copied_to_KB
+base_fieldops/Projeto FieldOps/19 - Critérios de Avaliação de62594f77cf82f88570814cc1106f5d.md,10-quality/testing.md,Evaluation criteria relate to testing/quality; consolidate into testing docs,copied_to_KB
+base_fieldops/Projeto FieldOps/18 - Definição de Pronto - Definition of Done 4142594f77cf827a9875812c6a103562.md,10-quality/definition-of-done.md,Definition of Done belongs in quality section,copied_to_KB
+base_fieldops/Projeto FieldOps/17 - Critérios de Aceitação acf2594f77cf82d599e501edefa62b42.md,01-product/requirements.md,Acceptance criteria map to product requirements and acceptance tests,copied_to_KB
+base_fieldops/Projeto FieldOps/16 - Roadmap 3332594f77cf829e847701cf0806f46f.md,11-planning/roadmap.md,Roadmap belongs to planning section,copied_to_KB
+base_fieldops/Projeto FieldOps/15 - Backlog do Produto fea2594f77cf82058bcd016de2cb4a4e.md,11-planning/backlog-structure.md,Backlog should be represented in planning/backlog structure,copied_to_KB
+base_fieldops/Projeto FieldOps/14 - Interface Administrativa Web 1152594f77cf8273918801b965c8494c.md,03-architecture/components.md,Admin UI belongs in architecture/components and development notes,copied_to_KB
+base_fieldops/Projeto FieldOps/13 - Aplicativo Mobile dfd2594f77cf839aa6d9015c3d62348a.md,03-architecture/target-architecture.md,Mobile is part of TO-BE architecture and MVP; map to architecture,copied_to_KB
+base_fieldops/Projeto FieldOps/12 - API REST aea2594f77cf83dd98bf815a7bb640de.md,05-api/api-overview.md,API contract and endpoints belong in API overview/specs,copied_to_KB
+base_fieldops/Projeto FieldOps/11 - Arquitetura 8b02594f77cf82bfb0fb01953613efb5.md,03-architecture/current-architecture.md,Architecture document maps to AS-IS architecture,copied_to_KB
+base_fieldops/Projeto FieldOps/10 - Modelo de Dados a332594f77cf822ba17501051650b5cf.md,06-data/data-model.md,Data model belongs to data section and ER diagrams,copied_to_KB
+base_fieldops/Projeto FieldOps/09 - Regras de Negócio cc62594f77cf8318a1f181711ac3f508.md,01-product/business-rules.md,Canonical business rules; make this the authoritative source in KB,copied_to_KB
+base_fieldops/Projeto FieldOps/08 - Funcionalidades c452594f77cf8265afb08165150da883.md,01-product/requirements.md,Feature list maps to product requirements and scope,copied_to_KB
+base_fieldops/Projeto FieldOps/07 - Fluxo Geral 6b72594f77cf8339bb12810f5cf3e6a7.md,01-product/user-flows.md,General flow maps to user flows and domain overview,copied_to_KB
+base_fieldops/Projeto FieldOps/06 - Casos de Uso c572594f77cf8254a8f481e2cc36bc98.md,01-product/functional-requirements.md,Use cases translate to functional requirements and specs,copied_to_KB
+base_fieldops/Projeto FieldOps/05 - Perfis de Usuário e032594f77cf8320bde881f2b8620f63.md,01-product/user-roles.md,User profiles map to roles and permissions doc,copied_to_KB
+base_fieldops/Projeto FieldOps/04 - Personas 23e2594f77cf83ba804b81c6fc9d2087.md,00-overview/stakeholders.md,Personas belong to stakeholders and personas overview,copied_to_KB
+base_fieldops/Projeto FieldOps/03 - Problema 4fe2594f77cf831792b0010351ed59fc.md,00-overview/project-overview.md,Problem statement belongs in project overview,copied_to_KB
+base_fieldops/Projeto FieldOps/02 - Objetivos ace2594f77cf834bb04181c0e65ffbba.md,00-overview/vision.md,Objectives map to vision and objectives doc,copied_to_KB
+base_fieldops/Projeto FieldOps/01 - Visão Geral e112594f77cf82b38e8e01d2e2dca974.md,00-overview/project-overview.md,Overview maps to project overview in KB,copied_to_KB
+Docs/references/base_fieldops/Projeto FieldOps 3022594f77cf8233a662814f75a0600f.md,99-reference/legacy/origin.md,Copy under Docs/references already exists; keep as legacy and reference in KB,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/22 Anexo D - Diagrama de Classe 61c2594f77cf82fca91181faa441f15d.md,03-architecture/diagrams/class-diagram.md,Duplicate of base_fieldops; consolidate into KB diagrams and keep reference copy,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/21 - Anexo C - Exemplo de Ficha de Inspeção e412594f77cf82c08b5001559bf8694b.md,99-reference/examples/ficha-de-inspecao.md,Reference copy; keep and point to canonical KB reference,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/20 - Anexo B - Decisões de escopo consolidadas c122594f77cf8347a70481f32a7fb230.md,12-decisions/decisions-scope.md,Reference copy; import into ADRs if not already,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/20 - Anexo A - Checklist executivo do projeto 83f2594f77cf83a694b901baee9a38a1.md,99-reference/legacy/checklist-executive.md,Reference copy; keep in references and link,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/19 - Critérios de Avaliação de62594f77cf82f88570814cc1106f5d.md,10-quality/testing.md,Reference copy; consolidate into testing strategy,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/18 - Definição de Pronto - Definition of Done 4142594f77cf827a9875812c6a103562.md,10-quality/definition-of-done.md,Reference copy; consolidate,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/17 - Critérios de Aceitação acf2594f77cf82d599e501edefa62b42.md,01-product/requirements.md,Reference copy; consolidate acceptance criteria,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/16 - Roadmap 3332594f77cf829e847701cf0806f46f.md,11-planning/roadmap.md,Reference copy; migrate to KB roadmap,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/15 - Backlog do Produto fea2594f77cf82058bcd016de2cb4a4e.md,11-planning/backlog-structure.md,Reference copy; consolidate into planning,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/14 - Interface Administrativa Web 1152594f77cf8273918801b965c8494c.md,03-architecture/components.md,Reference copy; consolidate into components,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/13 - Aplicativo Mobile dfd2594f77cf839aa6d9015c3d62348a.md,03-architecture/target-architecture.md,Reference copy for mobile; link to ADR and architecture,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/12 - API REST aea2594f77cf83dd98bf815a7bb640de.md,05-api/api-overview.md,Reference copy; migrate to API overview,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/11 - Arquitetura 8b02594f77cf82bfb0fb01953613efb5.md,03-architecture/current-architecture.md,Reference copy; consolidate,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/10 - Modelo de Dados a332594f77cf822ba17501051650b5cf.md,06-data/data-model.md,Reference copy; consolidate in data model,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/09 - Regras de Negócio cc62594f77cf8318a1f181711ac3f508.md,01-product/business-rules.md,Reference copy; canonical business rules go to KB,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/08 - Funcionalidades c452594f77cf8265afb08165150da883.md,01-product/requirements.md,Reference copy; consolidate into requirements,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/07 - Fluxo Geral 6b72594f77cf8339bb12810f5cf3e6a7.md,01-product/user-flows.md,Reference copy; consolidate into user flows,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/06 - Casos de Uso c572594f77cf8254a8f481e2cc36bc98.md,01-product/functional-requirements.md,Reference copy; consolidate into functional requirements,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/05 - Perfis de Usuário e032594f77cf8320bde881f2b8620f63.md,01-product/user-roles.md,Reference copy; consolidate roles,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/04 - Personas 23e2594f77cf83ba804b81c6fc9d2087.md,00-overview/stakeholders.md,Reference copy; consolidate stakeholders,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/03 - Problema 4fe2594f77cf831792b0010351ed59fc.md,00-overview/project-overview.md,Reference copy; consolidate overview,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/02 - Objetivos ace2594f77cf834bb04181c0e65ffbba.md,00-overview/vision.md,Reference copy; consolidate vision,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/01 - Visão Geral e112594f77cf82b38e8e01d2e2dca974.md,00-overview/project-overview.md,Reference copy; consolidate overview,mark_as_reference
+Docs/references/base_fieldops/Projeto FieldOps/22 Anexo D - Diagrama de Classe/image.png,03-architecture/diagrams/images/class-diagram.png,Binary diagram image to be copied into diagrams/images,mark_as_reference
