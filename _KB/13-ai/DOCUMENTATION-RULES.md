@@ -24,7 +24,7 @@ related:
 ## One concept, one source
 
 - evitar duplicação; referenciar o documento canônico em vez de copiar conteúdo.
-- regras de negócio vivem em `01-product/business-rules.md`.
+- regras de negócio vivem em `01-product/product-business-rules.md`.
 
 ## ADRs
 

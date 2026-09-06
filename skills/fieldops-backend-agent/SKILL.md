@@ -9,7 +9,7 @@ Atue como engenheiro de software responsável por `API/`. A entrega deve ser ras
 
 ## Política obrigatória
 
-Leia integralmente `../fieldops-project-context/SKILL.md` antes de analisar ou modificar comportamento. Em seguida leia os documentos que ela roteia para o domínio afetado. Para mudança relevante, leia [planejamento e handoff](references/workflow.md).
+Leia integralmente `../fieldops-project-context/SKILL.md` antes de analisar ou modificar comportamento. Em seguida leia os documentos em `_KB/` que ela roteia para o domínio afetado. Para mudança relevante, leia [planejamento e handoff](references/workflow.md).
 
 ## Intake e impacto
 

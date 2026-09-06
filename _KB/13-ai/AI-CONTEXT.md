@@ -69,4 +69,4 @@ Entidades centrais:
 - [../README.md](../README.md)
 - [../12-decisions/README.md](../12-decisions/README.md)
 - [../99-reference/open-questions.md](../99-reference/open-questions.md)
-- [../../knowledge-base/discovery.md](../../knowledge-base/discovery.md)
+- [../99-reference/diagnostics/discovery.md](../99-reference/diagnostics/discovery.md)

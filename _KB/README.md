@@ -1,15 +1,15 @@
 ---
 title: FieldOps Knowledge Base
 status: active
-last_reviewed: 2026-09-05
+last_reviewed: 2026-09-06
 owners:
   - product
   - backend
   - architecture
 related:
   - ../references/base_fieldops/Projeto FieldOps
-  - ../knowledge-base/discovery.md
-  - ../knowledge-base/README.md
+  - 99-reference/diagnostics/discovery.md
+  - 99-reference/knowledge-base-maintenance.md
 ---
 
 # FieldOps Knowledge Base
@@ -24,12 +24,11 @@ A fonte normativa do produto e do domínio é a documentação original em `base
 
 Hierarquia de autoridade:
 
-1. documentação original em `base_fieldops`;
-2. decisões formalmente aprovadas e registradas em `_KB/12-decisions`;
-3. documentação técnica consolidada em `Docs/`;
-4. implementação atual do código como evidência de AS-IS;
-5. documentação histórica e legado em `Docs/references` e `Docs/planning` como contexto e referência;
-6. hipóteses, propostas e rascunhos devem ser marcados como pendentes e não como fato.
+1. decisões formalmente aprovadas e registradas em `_KB/12-decisions`;
+2. documentação técnica consolidada em `_KB/`;
+3. implementação atual do código como evidência de AS-IS;
+4. documentação histórica e legado em `Docs/references` e `_KB/99-reference` como contexto e referência;
+5. hipóteses, propostas e rascunhos devem ser marcados como pendentes e não como fato.
 
 ## Como usar esta KB
 
@@ -43,14 +42,15 @@ Hierarquia de autoridade:
 
 ## Quick Navigation
 
-- Arquitetura: [03-architecture/current-architecture.md](03-architecture/current-architecture.md)
+- Arquitetura: [03-architecture/system-overview.md](03-architecture/system-overview.md) e [AWS](03-architecture/aws.md)
 - Domínio: [02-domain/domain-overview.md](02-domain/domain-overview.md)
-- Regras de negócio: [01-product/business-rules.md](01-product/business-rules.md)
+- Regras de negócio: [01-product/product-business-rules.md](01-product/product-business-rules.md)
 - APIs: [05-api/api-overview.md](05-api/api-overview.md)
 - Banco e dados: [06-data/data-model.md](06-data/data-model.md)
 - Segurança: [07-security/security-overview.md](07-security/security-overview.md)
-- Desenvolvimento: [04-development/getting-started.md](04-development/getting-started.md)
-- Infraestrutura: [08-infrastructure/infrastructure-overview.md](08-infrastructure/infrastructure-overview.md)
+- Desenvolvimento: [04-development/development-guide.md](04-development/development-guide.md)
+- Infraestrutura: [08-infrastructure/infrastructure-overview.md](08-infrastructure/infrastructure-overview.md) e [plano](08-infrastructure/deployment-plan.md)
+- CI/CD: [09-devops/cicd-plan.md](09-devops/cicd-plan.md)
 - Testes: [10-quality/testing.md](10-quality/testing.md)
 - Decisões: [12-decisions/README.md](12-decisions/README.md)
 - Planejamento: [11-planning/roadmap.md](11-planning/roadmap.md)
@@ -94,10 +94,14 @@ Ao alterar comportamento, regra, contrato, arquitetura ou segurança:
 4. atualizar testes e implementação conforme necessário;
 5. registrar pontos pendentes e desvios observados.
 
+## Regra de organização
+
+Não crie novos documentos nos diretórios legados fora de `_KB/`. Use `01-product` para produto/requisitos, `03-architecture` para arquitetura, `04-development` para desenvolvimento, `05-api` para contratos, `08-infrastructure` para implantação, `09-devops` para CI/CD, `10-quality` para qualidade, `11-planning` para planejamento e `12-decisions` para decisões. Diagnósticos e evidências ficam em `99-reference`.
+
 ## Fontes primárias
 
 - [../references/base_fieldops/Projeto FieldOps](../references/base_fieldops/Projeto%20FieldOps)
-- [../knowledge-base/discovery.md](../knowledge-base/discovery.md)
-- [../knowledge-base/README.md](../knowledge-base/README.md)
+- [99-reference/diagnostics/discovery.md](99-reference/diagnostics/discovery.md)
+- [99-reference/knowledge-base-maintenance.md](99-reference/knowledge-base-maintenance.md)
 - [../../API/README.md](../../API/README.md)
 - [../../interface-administrativa/package.json](../../interface-administrativa/package.json)

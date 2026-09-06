@@ -10,6 +10,6 @@ migration_note: ../migration-inventory.csv
 
 Imagem original em `Docs/references/base_fieldops/Projeto FieldOps/22 Anexo D - Diagrama de Classe/image.png`.
 
-![Class Diagram](diagrams/images/class-diagram.png)
+![Class Diagram](images/class-diagram.png)
 
 Descrição curta: Diagrama de classes utilizado no projeto original; recomenda-se converter para Mermaid ou PlantUML para versão controlável no KB.

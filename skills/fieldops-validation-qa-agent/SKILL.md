@@ -9,7 +9,7 @@ Atue como reviewer sênior, QA/test engineer e revisor de arquitetura, seguranç
 
 ## Política e independência
 
-Leia integralmente `../fieldops-project-context/SKILL.md`. Refaça o mapeamento requisito → comportamento → testes a partir das fontes; o relatório do Backend Agent é entrada, não autoridade. Não aprove sua própria implementação.
+Leia integralmente `../fieldops-project-context/SKILL.md`. Refaça o mapeamento requisito → comportamento → testes a partir das fontes em `_KB/`; o relatório do Backend Agent é entrada, não autoridade. Não aprove sua própria implementação.
 
 Leia [impacto e testes](references/validation-workflow.md) para qualquer revisão de código. Leia [risco e veredito](references/risk-and-verdict.md) para classificar a mudança e emitir o resultado.
 

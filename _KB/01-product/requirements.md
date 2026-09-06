@@ -2,7 +2,7 @@
 
 ---
 source: base_fieldops/Projeto FieldOps/08 - Funcionalidades c452594f77cf8265afb08165150da883.md
-origin: ../references/base_fieldops/Projeto FieldOps/08 - Funcionalidades c452594f77cf8265afb08165150da883.md
+origin: ../../references/base_fieldops/Projeto FieldOps/08 - Funcionalidades c452594f77cf8265afb08165150da883.md
 status: active
 last_reviewed: 2026-09-05
 migration_note: ../migration-inventory.csv
@@ -50,8 +50,8 @@ A implementação atual do repositório cobre parte desses requisitos, mas não 
 ## Fontes
 
 - [../../references/base_fieldops/Projeto FieldOps](../../references/base_fieldops/Projeto%20FieldOps)
-- [../../knowledge-base/discovery.md](../../knowledge-base/discovery.md)
-- [../../requirements/functional.md](../../requirements/functional.md)
+- [../99-reference/diagnostics/discovery.md](../99-reference/diagnostics/discovery.md)
+- [requirements-functional.md](requirements-functional.md)
 
 ## Critérios de Aceitação (Importado)
 
@@ -451,4 +451,3 @@ O incremento somente será aceito quando:
 - A listagem deve usar paginação.
 - Deve permitir filtros por estado, técnico, cliente, prioridade e período.
 - Inspeções atrasadas devem ser identificadas.
-

@@ -2,10 +2,10 @@
 
 ## Estrutura principal
 
-- [API](../../API): backend do sistema.
-- [interface-administrativa](../../interface-administrativa): frontend administrativo.
-- [Docs](../../Docs): documentação, requisitos e conhecimento do projeto.
-- [base_fieldops](../../base_fieldops): documentação original do produto e do domínio.
+- [API](../../../API): backend do sistema.
+- [interface-administrativa](../../../interface-administrativa): frontend administrativo.
+- [Docs](../..): documentação, requisitos e conhecimento do projeto.
+- [base_fieldops](../../references/base_fieldops): documentação original do produto e do domínio.
 
 ## Mapeamento por componente
 
@@ -19,7 +19,7 @@ Documentação: [../05-api/api-overview.md](../05-api/api-overview.md), [../07-s
 Responsabilidade: criação, versionamento e publicação de templates.
 Tecnologias: Java, JPA, Flyway.
 Dependências: inspection, domain model.
-Documentação: [../01-product/business-rules.md](../01-product/business-rules.md)
+Documentação: [../01-product/product-business-rules.md](../01-product/product-business-rules.md)
 
 ### API / inspection
 Responsabilidade: criação, execução e fluxo da inspeção.
@@ -49,7 +49,7 @@ Documentação: [../06-data/data-model.md](../06-data/data-model.md)
 Responsabilidade: painel administrativo e visualização.
 Tecnologias: Angular, TypeScript, Material.
 Dependências: API REST.
-Documentação: [../../interface-administrativa/README.md](../../interface-administrativa/README.md)
+Documentação: [../../../interface-administrativa/README.md](../../../interface-administrativa/README.md)
 
 ## Como usar este mapa
 

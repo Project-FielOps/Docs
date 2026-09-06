@@ -73,7 +73,7 @@ Detalhes por disciplina e marcos estão preservados no original e podem ser cons
 
 ## Fontes relacionadas
 
-- [../../API/README.md](../../API/README.md)
-- [../../knowledge-base/discovery.md](../../knowledge-base/discovery.md)
+- [../../../API/README.md](../../../API/README.md)
+- [../99-reference/diagnostics/discovery.md](../99-reference/diagnostics/discovery.md)
 - [../01-product/business-rules.md](../01-product/business-rules.md)
 

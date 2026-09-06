@@ -25,14 +25,14 @@ Nunca altere a expectativa ou um teste correto apenas para acomodar a implementa
 
 Antes de trabalho de domínio, leia integralmente:
 
-1. `../../knowledge-base/README.md` para autoridade e manutenção;
-2. `../../knowledge-base/discovery.md` para estado observado, gaps e conflitos;
-3. `../../product/mvp.md`;
-4. `../../architecture/decisions.md`;
-5. a especificação relevante em `../../specs/`;
-6. `../../requirements/traceability.md` e as RN/FR/AC relacionadas.
+1. `../../_KB/README.md` para autoridade e manutenção;
+2. `../../_KB/99-reference/diagnostics/discovery.md` para estado observado, gaps e conflitos;
+3. `../../_KB/01-product/product-mvp.md`;
+4. `../../_KB/12-decisions/architecture-decisions.md`;
+5. a especificação relevante em `../../_KB/05-api/specs/`;
+6. `../../_KB/01-product/requirements-traceability.md` e as RN/FR/AC relacionadas.
 
-Consulte arquitetura, engenharia e decisões pendentes conforme o impacto. Use `../../knowledge-base/discovery.md` para distinguir AS-IS de TO-BE. Documentos em `../../references/`, ficha, diagrama, TAP, EAP e cronogramas são históricos quando conflitarem com a base consolidada.
+Consulte arquitetura, engenharia e decisões pendentes conforme o impacto. Use `../../_KB/99-reference/diagnostics/discovery.md` para distinguir AS-IS de TO-BE. Documentos em `../../references/`, `_KB/99-reference/`, ficha, diagrama, TAP, EAP e cronogramas são históricos quando conflitarem com a base consolidada.
 
 ## Vocabulário obrigatório
 
