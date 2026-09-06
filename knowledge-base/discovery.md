@@ -96,7 +96,7 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-012 | Implementado corretamente | `GET /api/v1/users/assignable` retorna somente técnicos ativos para ADMIN/SUPERVISOR; gestão permanece ADMIN-only |
 | GAP-014 | Implementado corretamente | Storage selecionável por configuração: disco local no desenvolvimento e S3 privado em produção, com bucket/região externos e credenciais AWS padrão |
 | GAP-013 | Implementado corretamente | JPEG/JPG, PNG e PDF com assinatura binária, 10 MB/arquivo, 10/inspeção, download autorizado e compensação transacional; `EvidenceServiceTest` e suíte completa passaram |
-| GAP-015 | Parcialmente implementado | Refresh rotativo com `jti`, revogação no logout/alteração de senha e CORS configurável foram implementados; recuperação de senha por e-mail ainda não existe |
+| GAP-015 | Implementado corretamente | Recuperação por token opaco com hash SHA-256, 30 minutos, uso único, Amazon SES configurável, resposta anti-enumeração, reset transacional com revogação de sessões e senha temporária obrigatória |
 | GAP-016 | Implementado corretamente | Campos de resposta incompatíveis com `responseType` são rejeitados |
 | GAP-017 | Implementado corretamente | NC crítica exige descrição e evidência antes de submissão; vínculos são conferidos |
 | GAP-018 | Implementado corretamente | Exceção ADMIN removida e NC/evidência ficam imutáveis em inspeção aprovada/cancelada |
@@ -105,7 +105,7 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-024 | Implementado corretamente | Agendamento rejeita versão publicada não ativa para novas inspeções |
 | GAP-025 | Implementado corretamente | Listagem aceita prioridade e intervalo de período, preservando escopo do ator |
 
-GAP-005..010 e GAP-020..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura. GAP-012, GAP-013 e GAP-014 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-015 permanece parcial até existir o fluxo de recuperação de senha por e-mail; a revogação de sessão, rotação e CORS já foram validados. GAP-019 permanece parcial apenas pela ausência do mobile neste workspace; o backend de sync e seus cenários de replay, idempotência, cursor, conflito e retry foram implementados e validados.
+GAP-005..010 e GAP-020..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura. GAP-012, GAP-013, GAP-014 e GAP-015 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-019 permanece parcial apenas pela ausência do mobile neste workspace; o backend de sync e seus cenários de replay, idempotência, cursor, conflito e retry foram implementados e validados.
 
 ## Revalidação do item 4 — 2026-09-06
 

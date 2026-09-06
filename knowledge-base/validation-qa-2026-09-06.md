@@ -29,7 +29,7 @@ Comandos executados:
 
 `APPROVED_WITH_WARNINGS`
 
-Os GAPs GAP-001..004, GAP-011..014, GAP-016..018 e GAP-023..025 foram considerados corrigidos. GAP-013 foi aprovado após validação dos limites, MIME/assinatura, download autorizado e compensação transacional. GAP-015 permanece parcial: rotação, logout, alteração de senha, revogação server-side e CORS configurável foram aprovados; recuperação de senha por e-mail ainda não está implementada. GAP-019 permanece parcial: a cobertura crítica foi ampliada, mas sync aguarda endpoints para cobertura de integração. Não foram aprovados como implementação os GAPs documentais, mobile/sync, cronograma, catálogos e lacunas de frontend.
+Os GAPs GAP-001..004, GAP-011..014, GAP-016..018 e GAP-023..025 foram considerados corrigidos. GAP-013 foi aprovado após validação dos limites, MIME/assinatura, download autorizado e compensação transacional. GAP-015 foi aprovado após validação independente do fluxo completo de recuperação, SES configurável, token seguro, reset transacional e senha temporária. GAP-019 permanece parcial apenas quanto ao mobile. Não foram aprovados como implementação os GAPs documentais, cronograma, catálogos e lacunas de frontend.
 
 Risco residual: não há reconciliação automática para o caso extremo de falha do processo exatamente antes do callback de transação; a compensação cobre falhas de persistência, auditoria e commit, e deve ser complementada por monitoramento operacional antes do release.
 
@@ -70,3 +70,23 @@ O núcleo implementável do item 4 no backend foi concluído: health check, corr
 `APPROVED_WITH_WARNINGS`
 
 O contrato aprovado foi implementado para as operações online suportadas. A cobertura mobile da SQLite/outbox, retry real em dispositivo e resolução administrativa de conflitos permanecem fora deste repositório.
+
+## Revalidação do GAP-015 — recuperação de senha
+
+### Matriz requisito → símbolo/endpoint → teste → resultado
+
+| Requisito | Símbolo/endpoint | Teste/evidência | Resultado |
+|---|---|---|---|
+| Anti-enumeração e resposta 202 | `POST /api/v1/auth/forgot-password` | `AuthenticationTest.forgotPasswordHasSameGenericResponseForKnownAndUnknownEmail` | Passou |
+| Token seguro, hash e uso único | `PasswordResetToken`, `PasswordResetTokenRepository` | fluxo de reset e consulta por token puro | Passou |
+| Expiração e invalidação anterior | `expiresAt`, `invalidateActiveByUserId` | inspeção de migration/serviço + lock pessimista | Passou |
+| SES sem acoplamento de domínio | `EmailService`, `AwsSesEmailService`, `MailProperties` | inspeção de configuração e SDK; provider `noop` nos testes | Passou |
+| Reset transacional e revogação | `AuthService.resetPassword` | `AuthenticationTest.resetPasswordConsumesTokenAndRevokesRefreshSession` | Passou |
+| Senha temporária e primeiro acesso | `mustChangePassword`, `JwtAuthenticationFilter` | `AuthenticationTest.temporaryPasswordIsReportedAndBlocksNormalResourcesUntilChanged` | Passou |
+| Regressão completa | API + Flyway/Testcontainers | `mvn clean test` | 30 testes, 0 falhas, 0 erros |
+
+### Veredito independente
+
+`APPROVED`
+
+O GAP-015 foi validado como implementado corretamente. Não houve push. Permanecem apenas evidências operacionais de SES (sandbox/produção, domínio/remetente verificado e IAM da conta AWS), que são configuração de ambiente e não lacunas do backend.

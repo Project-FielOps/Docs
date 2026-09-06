@@ -8,16 +8,9 @@ Validado em 2026-09-06 pelo fluxo Backend Agent → Validation & QA Agent. O bac
 
 O storage continua selecionável por configuração: disco local no desenvolvimento e S3 privado em produção. A gravação ocorre antes do metadado, com remoção compensatória em falha de persistência/auditoria e callback de transação para falha de commit. O SDK AWS mantém retry padrão para operações S3; exclusões são idempotentes e best-effort.
 
-## GAP-015 — recuperação de senha
+## GAP-015 — recuperação de senha — concluído
 
-Refresh rotativo, `jti`, revogação server-side, logout, alteração de senha e CORS configurável já foram implementados. Ainda falta o fluxo de recuperação de senha previsto em DEC-005:
-
-- endpoint para solicitar recuperação sem revelar se o e-mail existe;
-- token único, armazenado de forma segura e expirando em 30 minutos;
-- envio por provedor de e-mail configurado externamente;
-- endpoint para redefinir a senha usando o token;
-- invalidação de todas as sessões após a redefinição;
-- política para senha temporária e troca obrigatória no primeiro acesso.
+Validado em 2026-09-06 pelo fluxo Backend Agent → Validation & QA Agent. Foram implementados os endpoints `POST /api/v1/auth/forgot-password` e `POST /api/v1/auth/reset-password`, token opaco de 32 bytes com somente hash SHA-256 persistido, validade de 30 minutos, uso único e invalidação de tokens anteriores. O envio usa Amazon SES via `EmailService`, configuração externa e cadeia padrão de credenciais AWS. A resposta é genérica para evitar enumeração, há limitação por IP/e-mail, redefinição transacional com revogação de todas as sessões e logs sem dados sensíveis. Senhas temporárias usam `mustChangePassword`, são informadas no login e bloqueiam recursos até `change-password`.
 
 ## GAP-019 e DEC-013 — sincronização mobile — backend concluído
 
