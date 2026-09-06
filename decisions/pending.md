@@ -12,6 +12,12 @@ O storage continua selecionável por configuração: disco local no desenvolvime
 
 Validado em 2026-09-06 pelo fluxo Backend Agent → Validation & QA Agent. Foram implementados os endpoints `POST /api/v1/auth/forgot-password` e `POST /api/v1/auth/reset-password`, token opaco de 32 bytes com somente hash SHA-256 persistido, validade de 30 minutos, uso único e invalidação de tokens anteriores. O envio usa Amazon SES via `EmailService`, configuração externa e cadeia padrão de credenciais AWS. A resposta é genérica para evitar enumeração, há limitação por IP/e-mail, redefinição transacional com revogação de todas as sessões e logs sem dados sensíveis. Senhas temporárias usam `mustChangePassword`, são informadas no login e bloqueiam recursos até `change-password`.
 
+### Evidência operacional AWS Academy — SES
+
+Durante a tentativa de configuração no AWS Academy, a role `voclabs` negou `ses:GetAccount`, `ses:TagResource` e `ses:CreateEmailIdentity`. Por isso, não foi possível criar ou verificar uma nova identidade remetente do SES nesse laboratório. A limitação é específica do ambiente AWS Academy e não altera a decisão arquitetural de utilizar Amazon SES em homologação e produção.
+
+No desenvolvimento, deve ser utilizado o provider alternativo de `EmailService` (`noop`) ou uma identidade SES previamente provisionada por uma conta com permissões adequadas. Em ambiente AWS real, devem ser configurados uma identidade/domínio verificado, remetente externo, IAM Role com `ses:SendEmail`, região compatível e saída da sandbox quando necessária para produção.
+
 ## GAP-019 e DEC-013 — sincronização mobile — backend concluído
 
 O backend implementa `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull`, com contrato, limites, idempotência persistida, dependências, conflitos, cursor e autenticação documentados em [`specs/synchronization.md`](../specs/synchronization.md). Testes de replay, autorização, cursor e falha de operação passaram.

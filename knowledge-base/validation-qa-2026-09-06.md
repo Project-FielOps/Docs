@@ -90,3 +90,9 @@ O contrato aprovado foi implementado para as operações online suportadas. A co
 `APPROVED`
 
 O GAP-015 foi validado como implementado corretamente. Não houve push. Permanecem apenas evidências operacionais de SES (sandbox/produção, domínio/remetente verificado e IAM da conta AWS), que são configuração de ambiente e não lacunas do backend.
+
+### Evidência operacional SES — AWS Academy
+
+Na tentativa de configuração operacional no AWS Academy, a role `voclabs` apresentou negações de IAM para `ses:GetAccount`, `ses:TagResource` e `ses:CreateEmailIdentity`. Como resultado, o laboratório não permite criar/verificar uma nova identidade remetente. Essa restrição é específica do laboratório e não caracteriza falha na integração desacoplada do backend.
+
+Para desenvolvimento, permanece disponível o provider alternativo de `EmailService` (`noop`) ou uma identidade SES previamente provisionada. Para AWS real, o checklist operacional é: identidade/domínio verificado, remetente configurado externamente, IAM Role com `ses:SendEmail`, região compatível e saída da sandbox quando aplicável.
