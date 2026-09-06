@@ -67,7 +67,7 @@ O cruzamento técnico incluiu controllers, serviços de inspeção, modelos, aut
 
 ## Decisões pendentes e perguntas prioritárias
 
-As decisões iniciais foram respondidas em 2026-09-05: regras textuais e decisões consolidadas são a autoridade do MVP; execução pertence ao técnico atribuído e revisão ao supervisor atribuído; entrega deve ocorrer até o fim de novembro de 2026 e AWS é obrigatória; rejeição reabre explicitamente em `IN_PROGRESS`; sync usa push/pull separados e upload separado; GPS ausente é registrado e QR divergente bloqueia o vínculo até identificação manual do equipamento previsto. As perguntas restantes, propostas e impactos estão em [decisões pendentes](../decisions/pending.md). Respostas futuras devem ser adicionadas como decisão datada, não inferidas do código.
+As decisões iniciais e DEC-004 a DEC-012 foram respondidas em 2026-09-05/06; estão registradas em [decisões](../architecture/decisions.md). As perguntas futuras, propostas e impactos ficam em [decisões pendentes](../decisions/pending.md). Respostas futuras devem ser adicionadas como decisão datada, não inferidas do código.
 
 ## Riscos
 
@@ -80,4 +80,25 @@ As decisões iniciais foram respondidas em 2026-09-05: regras textuais e decisõ
 | Documentação falsa de conclusão | GAP-019/020 | Distinguir plano, implementação encontrada, teste executado e aceite confirmado |
 | Arquivos órfãos ou indisponíveis | Escrita/remoção em disco não participa da transação SQL | Especificar confirmação e recuperação de arquivos antes do deploy |
 
-Não foram estimadas probabilidades, horas ou responsáveis sem evidência. Não foram feitas alterações no código das aplicações.
+Na análise inicial não foram estimadas probabilidades, horas ou responsáveis sem evidência, nem feitas alterações no código das aplicações.
+
+## Revalidação das correções — 2026-09-06
+
+Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente de Backend Agent → Validation & QA Agent. A suíte `mvn test` passou com Java 21, PostgreSQL 16 em Testcontainers e 10 testes executados. A evidência detalhada está em [validation-qa-2026-09-06.md](validation-qa-2026-09-06.md).
+
+| GAP | Estado validado | Evidência principal |
+|---|---|---|
+| GAP-001 | Implementado corretamente | ADMIN não inicia, responde, revisa, aprova ou reprova; vínculos são exigidos no serviço |
+| GAP-002 | Implementado corretamente | Leituras de inspeção, respostas, revisões, evidências e NCs verificam papel/vínculo e escopo do caminho |
+| GAP-003 | Implementado corretamente | `REJECTED` exige `POST /reopen-correction` antes de resposta ou submissão |
+| GAP-004 | Implementado corretamente | Atualizações de resposta registram valores anterior/novo em auditoria sem conteúdo sensível adicional |
+| GAP-011 | Implementado corretamente | Erros expõem `requestId` e `fieldErrors` conforme contrato canônico |
+| GAP-015 | Parcialmente implementado | Token de usuário inativo/bloqueado deixa de autenticar; revogação de logout e CORS configurável permanecem pendentes |
+| GAP-016 | Implementado corretamente | Campos de resposta incompatíveis com `responseType` são rejeitados |
+| GAP-017 | Implementado corretamente | NC crítica exige descrição e evidência antes de submissão; vínculos são conferidos |
+| GAP-018 | Implementado corretamente | Exceção ADMIN removida e NC/evidência ficam imutáveis em inspeção aprovada/cancelada |
+| GAP-023 | Implementado corretamente | Item só pode ser atualizado/removido pela seção a que pertence |
+| GAP-024 | Implementado corretamente | Agendamento rejeita versão publicada não ativa para novas inspeções |
+| GAP-025 | Implementado corretamente | Listagem aceita prioridade e intervalo de período, preservando escopo do ator |
+
+GAP-005..010, GAP-012..014 e GAP-019..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura; não foram marcados como implementados por código sem autoridade normativa suficiente. GAP-015 permanece aberto até existir política de revogação de JWT/logout e origem CORS de implantação.

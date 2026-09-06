@@ -83,13 +83,8 @@ GET  /api/v1/auth/me
 {
 	"accessToken": "token",
 	"refreshToken": "token-de-renovacao",
-	"expiresIn": 900,
-	"user": {
-		"id": "8a50e30d-2a58-4a24-944e-10a9948abf01",
-		"name": "Carlos Técnico",
-		"email": "tecnico@fieldops.local",
-		"role": "TECHNICIAN"
-	}
+	"tokenType": "Bearer",
+	"expiresInSeconds": 1800
 }
 ```
 
@@ -185,6 +180,7 @@ POST   /api/v1/inspections/{id}/assign
 POST   /api/v1/inspections/{id}/cancel
 POST   /api/v1/inspections/{id}/start
 POST   /api/v1/inspections/{id}/submit
+POST   /api/v1/inspections/{id}/reopen-correction
 POST   /api/v1/inspections/{id}/begin-review
 POST   /api/v1/inspections/{id}/approve
 POST   /api/v1/inspections/{id}/reject
@@ -216,8 +212,8 @@ A API deverá filtrar os dados pelo usuário autenticado, sem depender apenas de
 
 ```
 GET  /api/v1/inspections/{inspectionId}/responses
-PUT  /api/v1/inspections/{inspectionId}/responses/{responseId}
-POST /api/v1/inspections/{inspectionId}/responses:batch
+ PUT  /api/v1/inspections/{inspectionId}/responses/{inspectionItemId}
+ PUT  /api/v1/inspections/{inspectionId}/responses
 ```
 
 ### Exemplo de resposta do checklist
