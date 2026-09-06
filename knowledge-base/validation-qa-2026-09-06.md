@@ -32,3 +32,22 @@ Comandos executados:
 Os GAPs GAP-001..004, GAP-011..014, GAP-016..018 e GAP-023..025 foram considerados corrigidos. GAP-013 foi aprovado após validação dos limites, MIME/assinatura, download autorizado e compensação transacional. GAP-015 permanece parcial: rotação, logout, alteração de senha, revogação server-side e CORS configurável foram aprovados; recuperação de senha por e-mail ainda não está implementada. GAP-019 permanece parcial: a cobertura crítica foi ampliada, mas sync aguarda endpoints para cobertura de integração. Não foram aprovados como implementação os GAPs documentais, mobile/sync, cronograma, catálogos e lacunas de frontend.
 
 Risco residual: não há reconciliação automática para o caso extremo de falha do processo exatamente antes do callback de transação; a compensação cobre falhas de persistência, auditoria e commit, e deve ser complementada por monitoramento operacional antes do release.
+
+## Revalidação do item 4 — qualidade e aceite técnico
+
+### Matriz requisito → símbolo/endpoint → teste → resultado
+
+| Requisito | Símbolo/endpoint | Teste executado | Resultado |
+|---|---|---|---|
+| Health check público | `GET /actuator/health` | `AuthenticationTest.healthEndpointIsPublicAndReturnsCorrelationId` | Passou; HTTP 200 e `status=UP` |
+| Correlation ID informado pelo cliente | `RequestCorrelationFilter`, `ApiError` | `AuthenticationTest.loginWithWrongPasswordReturns401WithStandardErrorBody` | Passou; o mesmo ID aparece no header e em `requestId` |
+| Correlation ID seguro quando inválido | `RequestCorrelationFilter` | `AuthenticationTest.invalidRequestIdIsReplacedWithSafeCorrelationId` | Passou; valor inválido é substituído por UUID |
+| Propagação para logs | MDC `requestId` e `logging.pattern.level` | Inspeção estática da configuração + execução da aplicação de teste | Passou; o padrão inclui `[requestId:%X{requestId}]` |
+| Regressão backend | Todos os módulos | `mvn clean test` | Passou; 23 testes, 0 falhas, 0 erros |
+| Empacotamento | Artefato Spring Boot | `mvn clean package` | Passou; JAR executável gerado |
+
+### Veredito independente
+
+`APPROVED_WITH_WARNINGS`
+
+O núcleo implementável do item 4 no backend foi concluído: health check, correlação entre requisição/resposta/erro/log e testes de regressão. Permanecem como evidências operacionais, fora do escopo de um teste de integração local, a medição de p95 ≤ 500 ms sob carga representativa, a inspeção em ambiente AWS e a demonstração ponta a ponta com mobile.

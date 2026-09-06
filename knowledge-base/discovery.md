@@ -106,3 +106,7 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-025 | Implementado corretamente | Listagem aceita prioridade e intervalo de período, preservando escopo do ator |
 
 GAP-005..010 e GAP-020..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura. GAP-012, GAP-013 e GAP-014 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-015 permanece parcial até existir o fluxo de recuperação de senha por e-mail; a revogação de sessão, rotação e CORS já foram validados. GAP-019 permanece parcial até a implementação do sync, quando seus cenários de replay, idempotência, conflito e retry poderão ser testados.
+
+## Revalidação do item 4 — 2026-09-06
+
+O backend implementa health check público, correlation ID seguro no header `X-Request-ID`, propagação para `ApiError` e MDC dos logs. Os cenários foram cobertos por testes de integração e a suíte limpa passou com 23 testes; o empacotamento também passou. A medição de p95 sob carga, inspeção em ambiente AWS e demonstração ponta a ponta permanecem evidências operacionais pendentes, conforme registrado em `decisions/pending.md`.

@@ -69,7 +69,7 @@ Ainda faltam evidências para concluir o aceite do produto:
 - testes frontend e auditoria WCAG 2.1 AA;
 - teste mobile de SQLite/outbox e permissões negadas;
 - teste de carga para p95 de API ≤ 500 ms, excluindo transferências;
-- inspeção de logs estruturados e correlation ID em ambiente executando;
+- inspeção de logs estruturados e correlation ID em ambiente executando (correlation ID implementado no backend; evidência de ambiente ainda pendente);
 - demonstração ponta a ponta com evidência de aceite;
 - matriz completa requisito → aceite → teste → evidência.
 
