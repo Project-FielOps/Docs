@@ -94,6 +94,7 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-004 | Implementado corretamente | Atualizações de resposta registram valores anterior/novo em auditoria sem conteúdo sensível adicional |
 | GAP-011 | Implementado corretamente | Erros expõem `requestId` e `fieldErrors` conforme contrato canônico |
 | GAP-012 | Implementado corretamente | `GET /api/v1/users/assignable` retorna somente técnicos ativos para ADMIN/SUPERVISOR; gestão permanece ADMIN-only |
+| GAP-014 | Implementado corretamente | Storage selecionável por configuração: disco local no desenvolvimento e S3 privado em produção, com bucket/região externos e credenciais AWS padrão |
 | GAP-015 | Parcialmente implementado | Token de usuário inativo/bloqueado deixa de autenticar; revogação de logout e CORS configurável permanecem pendentes |
 | GAP-016 | Implementado corretamente | Campos de resposta incompatíveis com `responseType` são rejeitados |
 | GAP-017 | Implementado corretamente | NC crítica exige descrição e evidência antes de submissão; vínculos são conferidos |
@@ -102,4 +103,4 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-024 | Implementado corretamente | Agendamento rejeita versão publicada não ativa para novas inspeções |
 | GAP-025 | Implementado corretamente | Listagem aceita prioridade e intervalo de período, preservando escopo do ator |
 
-GAP-005..010, GAP-013..014 e GAP-019..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura; não foram marcados como implementados por código sem autoridade normativa suficiente. GAP-012 foi implementado conforme decisão aprovada em 2026-09-06. GAP-015 permanece aberto até a implementação da política aprovada de revogação de JWT/logout e origem CORS de implantação.
+GAP-005..010, GAP-013 e GAP-019..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura; não foram marcados como implementados por código sem autoridade normativa suficiente. GAP-012 e GAP-014 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-015 permanece aberto até a implementação da política aprovada de revogação de JWT/logout e origem CORS de implantação.
