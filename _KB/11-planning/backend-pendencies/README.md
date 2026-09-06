@@ -2,6 +2,8 @@
 
 Atualizado em 2026-09-06.
 
+O acompanhamento operacional das tasks está em [BACKLOG.md](BACKLOG.md).
+
 ## Status geral
 
 Não há GAP funcional de código backend atualmente classificado como aberto. A API possui autenticação, autorização, inspeções, evidências, storage S3, recuperação de senha, sincronização, auditoria e testes automatizados.
