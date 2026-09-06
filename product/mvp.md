@@ -8,9 +8,9 @@ Referência: capítulos textuais 01, 08, 15, 17 e Anexo B da base preservada. A 
 - Gestão de usuários por administrador; clientes, locais e equipamentos por administrador/supervisor.
 - Modelo com seções, itens, regras, prévia, versão publicada e snapshot na inspeção.
 - Agendamento com cliente, local, técnico ativo, supervisor, prioridade, prazo e instruções; equipamento conforme tipo de inspeção; cancelamento justificado.
-- Técnico consulta somente suas inspeções, inicia, responde checklist dinâmico, registra observações, fotos e NC, confirma equipamento por QR e coleta localização pontual mediante permissão.
+- Técnico consulta somente suas inspeções, inicia, responde checklist dinâmico, registra observações, fotos e NC, confirma equipamento por QR e coleta localização pontual mediante permissão. Evidências aceitas: JPEG/JPG, PNG e PDF, até 10 MB por arquivo e 10 por inspeção.
 - Download prévio, SQLite operacional, retomada após reinício, outbox, idempotência, sincronização com resultado por operação e conflito explícito.
-- Supervisor acompanha, vê respostas/fotos/NC/localização, inicia revisão, aprova ou reprova com motivo; técnico recebe correção.
+- Supervisor acompanha, vê respostas/fotos/NC/localização, inicia revisão, aprova ou reprova com motivo; técnico recebe correção. O dashboard mínimo é obrigatório: pendentes, enviadas, aprovadas/rejeitadas e aguardando revisão.
 - Auditoria mínima, erros padronizados, migrações, OpenAPI, testes críticos, build Android e demonstração integrada.
 
 Os 72 PBI P0 estão ligados a requisitos e aceites em [rastreabilidade](../requirements/traceability.md). As lacunas de implementação não retiram itens do MVP.

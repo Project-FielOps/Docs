@@ -37,3 +37,7 @@ stateDiagram-v2
 ## DEC-013 Contrato de sincronização
 
 **Status:** aprovada em 2026-09-05. Usar `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull?cursor=...`. Cada operação tem `operationId` idempotente e resultado individual; o cursor só avança depois de persistir alterações. Upload de evidência é separado e a submissão só é confirmada após evidências obrigatórias. Payloads, códigos de conflito e limites permanecem a especificar em `specs/synchronization.md`.
+
+## DEC-004 a DEC-012 Fechamentos
+
+**Status:** aprovadas em 2026-09-06. DEC-004 aceita JPEG/JPG, PNG e PDF, com 10 MB por arquivo e 10 evidências por inspeção; vídeo está fora do MVP. DEC-005 exige senha temporária com troca no primeiro acesso, recuperação por token único de e-mail em 30 minutos, JWT curto, refresh rotativo e revogação no logout/troca de senha. DEC-006 define 48 horas para revisão e sinalização interna posterior. DEC-007 exige conflitos explícitos, preservação da versão do servidor, dados locais mantidos e decisão administrativa auditada. DEC-010 proíbe remoção de evidência sincronizada pelo técnico e exige soft delete administrativo auditado, sem exclusão física automática no MVP. DEC-011 define WCAG 2.1 AA, p95 de API ≤ 500 ms fora de transferências/dependências externas, logs estruturados, correlation ID, erros e health check. DEC-012 torna obrigatório o dashboard mínimo com pendentes, enviadas, aprovadas/rejeitadas e aguardando revisão; análises avançadas permanecem SHOULD HAVE.

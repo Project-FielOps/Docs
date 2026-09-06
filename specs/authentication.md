@@ -10,7 +10,7 @@ Aplicar RN-001..008 e DEC-002. A sessão não concede acesso por URL: cada endpo
 
 ## Dados e erros
 
-Senha é hash no servidor e nunca aparece em DTO/log. O código atual usa TTL de 30 min para acesso e 24 h para refresh em `application.yml`; esses valores são configuração observada, não decisão de produto até DEC-005. Erros relevantes: `401 INVALID_CREDENTIALS`/`AUTHENTICATION_REQUIRED` e `403 ACCESS_DENIED`.
+Senha é hash no servidor e nunca aparece em DTO/log. DEC-005 exige senha temporária com troca obrigatória no primeiro acesso, recuperação por token único enviado por e-mail com expiração de 30 minutos, JWT curto, refresh rotativo, revogação no logout e invalidação de todos os refresh tokens na troca/redefinição. O código atual ainda usa TTL configurado e logout stateless, devendo ser alinhado. Erros relevantes: `401 INVALID_CREDENTIALS`/`AUTHENTICATION_REQUIRED` e `403 ACCESS_DENIED`.
 
 ## Aceite
 

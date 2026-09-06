@@ -1,0 +1,4 @@
+interface:
+  display_name: "FieldOps Validation & QA"
+  short_description: "Valida mudanças do FieldOps com independência"
+  default_prompt: "Use $fieldops-validation-qa-agent para revisar e validar esta alteração do FieldOps."

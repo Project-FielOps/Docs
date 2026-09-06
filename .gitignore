@@ -1,5 +1,11 @@
-# Local agent workspaces; do not commit drafts or reusable instructions here.
-skills/
+# Local agent workspaces; version only the approved FieldOps agent skills below.
+skills/*
+!skills/fieldops-project-context/
+!skills/fieldops-project-context/**
+!skills/fieldops-backend-agent/
+!skills/fieldops-backend-agent/**
+!skills/fieldops-validation-qa-agent/
+!skills/fieldops-validation-qa-agent/**
 plans/
 *.json
 *.tar.gz

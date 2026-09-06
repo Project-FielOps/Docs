@@ -18,4 +18,4 @@ O servidor só confirma conclusão/submissão quando respostas obrigatórias, ob
 
 ## Pendências do contrato
 
-Definir esquema JSON final, paginação/lote, retenção da chave idempotente, backoff e limite de tentativas, códigos de conflito, autenticação de dispositivo e estratégia de upload privado. Essas escolhas não devem ser codificadas fora de uma atualização deste documento e do OpenAPI.
+Definir esquema JSON final, paginação/lote, retenção da chave idempotente, backoff e limite de tentativas, códigos de conflito, autenticação de dispositivo e estratégia de upload privado. DEC-007 já exige conflito consultável, dados locais preservados e decisão administrativa auditada entre manter o servidor ou aceitar o envio.

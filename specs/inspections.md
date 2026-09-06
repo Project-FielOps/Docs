@@ -14,7 +14,7 @@ Obrigatórios, observação e evidência em não conformidade seguem o snapshot.
 
 ## Recursos nativos
 
-QR divergente não confirma o vínculo; o técnico identifica manualmente o equipamento previsto. GPS é pontual, opcional e sua ausência é registrada. Foto é a evidência principal no MVP; vídeo, documento, assinatura e plano de ação da ficha são históricos/futuros.
+QR divergente não confirma o vínculo; o técnico identifica manualmente o equipamento previsto. GPS é pontual, opcional e sua ausência é registrada. Evidências aceitas no MVP são JPEG/JPG, PNG e PDF, até 10 MB por arquivo e 10 por inspeção; vídeo, assinatura e plano de ação da ficha são históricos/futuros.
 
 ## Dependências
 
