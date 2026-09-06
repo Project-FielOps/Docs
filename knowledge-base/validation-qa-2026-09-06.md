@@ -51,3 +51,22 @@ Risco residual: não há reconciliação automática para o caso extremo de falh
 `APPROVED_WITH_WARNINGS`
 
 O núcleo implementável do item 4 no backend foi concluído: health check, correlação entre requisição/resposta/erro/log e testes de regressão. Permanecem como evidências operacionais, fora do escopo de um teste de integração local, a medição de p95 ≤ 500 ms sob carga representativa, a inspeção em ambiente AWS e a demonstração ponta a ponta com mobile.
+
+## Revalidação do GAP-019 — sincronização backend
+
+### Matriz requisito → símbolo/endpoint → teste → resultado
+
+| Requisito | Símbolo/endpoint | Teste executado | Resultado |
+|---|---|---|---|
+| Push autenticado para técnico | `POST /api/v1/mobile/sync/push` | `SyncIntegrationTest.pushPersistsRejectedOperationAndReplayIsIdempotent` | Passou |
+| Idempotência server-side | `SyncOperationRepository` | Mesmo teste, segundo envio do mesmo `operationId` | Passou; `ALREADY_APPLIED` |
+| Pull com cursor inicial | `GET /api/v1/mobile/sync/pull` | `SyncIntegrationTest.pullStartsAtZeroAndReturnsNextCursor` | Passou; cursor `0` |
+| Papel incorreto | `SyncController` | `SyncIntegrationTest.nonTechnicianCannotUseSync` | Passou; HTTP 403 |
+| Cursor inválido | `SyncService.parseCursor` | `SyncIntegrationTest.invalidCursorIsRejected` | Passou; `INVALID_SYNC_CURSOR` |
+| Migration e integração JPA | `V4__mobile_sync.sql` | `mvn clean test` e `mvn clean package` | Passou; 27 testes e JAR gerado |
+
+### Veredito independente
+
+`APPROVED_WITH_WARNINGS`
+
+O contrato aprovado foi implementado para as operações online suportadas. A cobertura mobile da SQLite/outbox, retry real em dispositivo e resolução administrativa de conflitos permanecem fora deste repositório.

@@ -19,18 +19,11 @@ Refresh rotativo, `jti`, revogação server-side, logout, alteração de senha e
 - invalidação de todas as sessões após a redefinição;
 - política para senha temporária e troca obrigatória no primeiro acesso.
 
-## GAP-019 e DEC-013 — sincronização mobile
+## GAP-019 e DEC-013 — sincronização mobile — backend concluído
 
-A direção de push/pull foi aprovada, mas os endpoints ainda não existem no backend. Antes da implementação, ainda precisam ser fechados:
+O backend implementa `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull`, com contrato, limites, idempotência persistida, dependências, conflitos, cursor e autenticação documentados em [`specs/synchronization.md`](../specs/synchronization.md). Testes de replay, autorização, cursor e falha de operação passaram.
 
-- esquema JSON final de push e pull;
-- paginação, tamanho máximo de lote e limites de payload;
-- retenção de `operationId` e política de limpeza;
-- backoff, limite de tentativas e estados de retry;
-- catálogo final de códigos de conflito;
-- autenticação e identificação do dispositivo;
-- estratégia de upload privado associada à sincronização;
-- testes de replay, idempotência, conflito, dependência e falha parcial.
+Continuam pendentes apenas a implementação mobile da SQLite/outbox, testes no dispositivo e a resolução administrativa de conflitos no cliente.
 
 ## GAP-020 — cronograma e governança
 

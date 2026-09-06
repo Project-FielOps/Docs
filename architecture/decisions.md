@@ -36,7 +36,7 @@ stateDiagram-v2
 
 ## DEC-013 Contrato de sincronização
 
-**Status:** aprovada em 2026-09-05. Usar `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull?cursor=...`. Cada operação tem `operationId` idempotente e resultado individual; o cursor só avança depois de persistir alterações. Upload de evidência é separado e a submissão só é confirmada após evidências obrigatórias. Payloads, códigos de conflito e limites permanecem a especificar em `specs/synchronization.md`.
+**Status:** aprovada em 2026-09-05 e detalhada em 2026-09-06. Usar `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull?cursor=...`. Cada operação tem `operationId` idempotente por usuário/dispositivo e resultado individual; o cursor só avança depois de persistir alterações. O push aceita até 50 operações, 1 MB por requisição, 256 KB por operação e 10 dependências; chaves ficam retidas por 90 dias; retry usa no máximo 5 tentativas com backoff exponencial e jitter. Upload de evidência é separado e a submissão só é confirmada após evidências obrigatórias. O contrato completo, códigos de conflito e autenticação por JWT + `deviceId` estão em `specs/synchronization.md`.
 
 ## DEC-004 a DEC-012 Fechamentos
 

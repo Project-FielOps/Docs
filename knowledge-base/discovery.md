@@ -100,12 +100,12 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-016 | Implementado corretamente | Campos de resposta incompatíveis com `responseType` são rejeitados |
 | GAP-017 | Implementado corretamente | NC crítica exige descrição e evidência antes de submissão; vínculos são conferidos |
 | GAP-018 | Implementado corretamente | Exceção ADMIN removida e NC/evidência ficam imutáveis em inspeção aprovada/cancelada |
-| GAP-019 | Parcialmente implementado | Suíte ampliada para 16 testes, incluindo workflow, autorização, autenticação e storage; sync ainda não possui endpoints implementados para testes de integração |
+| GAP-019 | Parcialmente implementado | Backend possui push/pull, idempotência, cursor e testes de integração; SQLite/outbox mobile e testes no dispositivo ainda não estão neste workspace |
 | GAP-023 | Implementado corretamente | Item só pode ser atualizado/removido pela seção a que pertence |
 | GAP-024 | Implementado corretamente | Agendamento rejeita versão publicada não ativa para novas inspeções |
 | GAP-025 | Implementado corretamente | Listagem aceita prioridade e intervalo de período, preservando escopo do ator |
 
-GAP-005..010 e GAP-020..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura. GAP-012, GAP-013 e GAP-014 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-015 permanece parcial até existir o fluxo de recuperação de senha por e-mail; a revogação de sessão, rotação e CORS já foram validados. GAP-019 permanece parcial até a implementação do sync, quando seus cenários de replay, idempotência, conflito e retry poderão ser testados.
+GAP-005..010 e GAP-020..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura. GAP-012, GAP-013 e GAP-014 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-015 permanece parcial até existir o fluxo de recuperação de senha por e-mail; a revogação de sessão, rotação e CORS já foram validados. GAP-019 permanece parcial apenas pela ausência do mobile neste workspace; o backend de sync e seus cenários de replay, idempotência, cursor, conflito e retry foram implementados e validados.
 
 ## Revalidação do item 4 — 2026-09-06
 
