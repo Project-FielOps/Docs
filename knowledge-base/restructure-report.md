@@ -23,4 +23,4 @@ Os capítulos originais, diagrama, ficha, TAP, EAP, cronograma e catálogos deri
 
 ## Pendências restantes
 
-DEC-004/005/006/007/010/011/012 continuam abertas. Faltam mobile, sync implementado, pipeline/deploy AWS, testes frontend e evidência de demonstração. O próximo passo recomendado é transformar DEC-002/003/013 em issues técnicas e corrigir autorização por objeto antes de construir o mobile.
+As decisões de produto foram definidas, mas permanecem pendências de detalhamento, implementação e evidência de aceite. A lista vigente está consolidada em [decisions/pending.md](../decisions/pending.md). O GAP-013 é explicado ali: existe upload em disco/S3, mas ainda faltam validações finais, limite por inspeção, download autorizado e consistência arquivo-banco. O próximo passo deve ser priorizado a partir desse arquivo, sem tratar decisões já aprovadas como perguntas novamente.
