@@ -51,7 +51,7 @@ O cruzamento técnico incluiu controllers, serviços de inspeção, modelos, aut
 | GAP-010 | Exemplo de login inclui user/expiresIn; código retorna tokenType/expiresInSeconds e busca usuário em /auth/me | Corrigir instrução de integração; exemplo não é contrato vigente |
 | GAP-011 | Base e Angular usam fieldErrors/requestId; API usa details/error, sem requestId no erro | Erros por campo podem não aparecer; correlação prevista não foi implementada |
 | GAP-012 | Planejamento Angular busca usuários por /users; controller restringe toda a rota a ADMIN | Supervisor pode não carregar técnicos/supervisores; propor consulta mínima de atribuíveis sem abrir gestão de usuários |
-| GAP-013 | EAP/cronograma dizem que upload real não existe; EvidenceService grava arquivos em disco | Corrigir estado técnico, sem afirmar visualização de fotos concluída: GET retorna metadados |
+| GAP-013 | EAP/cronograma diziam que upload real não existia; EvidenceService já grava fora do banco | Implementado e validado: tipos, MIME real, limites, download autorizado e compensação storage/banco |
 | GAP-014 | Resumos tratam object storage como atual; FileStorageService usa disco local | S3/AWS é proposta, não infraestrutura instalada |
 | GAP-015 | RN-008 e segurança pretendem invalidação/restrição; JWT logout não revoga, filtro de acesso não verifica status ativo, CORS aceita qualquer origem | Documentar lacunas; não chamar segurança concluída com base no login |
 | GAP-016 | RN-036 valida por tipo; AnswerUpsertRequest e upsert aceitam campos sem compatibilidade com snapshot | Testes de obrigatoriedade não cobrem validação tipada |
@@ -95,6 +95,7 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-011 | Implementado corretamente | Erros expõem `requestId` e `fieldErrors` conforme contrato canônico |
 | GAP-012 | Implementado corretamente | `GET /api/v1/users/assignable` retorna somente técnicos ativos para ADMIN/SUPERVISOR; gestão permanece ADMIN-only |
 | GAP-014 | Implementado corretamente | Storage selecionável por configuração: disco local no desenvolvimento e S3 privado em produção, com bucket/região externos e credenciais AWS padrão |
+| GAP-013 | Implementado corretamente | JPEG/JPG, PNG e PDF com assinatura binária, 10 MB/arquivo, 10/inspeção, download autorizado e compensação transacional; `EvidenceServiceTest` e suíte completa passaram |
 | GAP-015 | Parcialmente implementado | Refresh rotativo com `jti`, revogação no logout/alteração de senha e CORS configurável foram implementados; recuperação de senha por e-mail ainda não existe |
 | GAP-016 | Implementado corretamente | Campos de resposta incompatíveis com `responseType` são rejeitados |
 | GAP-017 | Implementado corretamente | NC crítica exige descrição e evidência antes de submissão; vínculos são conferidos |
@@ -104,4 +105,4 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-024 | Implementado corretamente | Agendamento rejeita versão publicada não ativa para novas inspeções |
 | GAP-025 | Implementado corretamente | Listagem aceita prioridade e intervalo de período, preservando escopo do ator |
 
-GAP-005..010, GAP-013 e GAP-020..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura; não foram marcados como implementados por código sem autoridade normativa suficiente. GAP-012 e GAP-014 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-015 permanece parcial até existir o fluxo de recuperação de senha por e-mail; a revogação de sessão, rotação e CORS já foram validados. GAP-019 permanece parcial até a implementação do sync, quando seus cenários de replay, idempotência, conflito e retry poderão ser testados.
+GAP-005..010 e GAP-020..022 permanecem documentais, históricos, de frontend ou dependentes de decisão/infraestrutura. GAP-012, GAP-013 e GAP-014 foram implementados conforme decisões aprovadas em 2026-09-06. GAP-015 permanece parcial até existir o fluxo de recuperação de senha por e-mail; a revogação de sessão, rotação e CORS já foram validados. GAP-019 permanece parcial até a implementação do sync, quando seus cenários de replay, idempotência, conflito e retry poderão ser testados.

@@ -2,18 +2,11 @@
 
 Atualizado em 2026-09-06. Este é o arquivo único para registrar pendências ainda abertas. Decisões aprovadas permanecem em `architecture/decisions.md`; este arquivo registra o que ainda precisa de detalhamento, implementação ou evidência de aceite.
 
-## GAP-013 — evidências e upload
+## GAP-013 — evidências e upload — concluído
 
-O backend já possui upload real e grava o arquivo fora do banco. No ambiente local, o arquivo é salvo em disco; em produção, o storage S3 já pode ser selecionado por configuração. Entretanto, o GAP continua aberto porque o requisito do MVP exige mais do que a existência do método de upload:
+Validado em 2026-09-06 pelo fluxo Backend Agent → Validation & QA Agent. O backend agora valida extensão, MIME declarado e assinatura binária para JPEG/JPG, PNG e PDF; rejeita conteúdo falsificado; aplica 10 MB por arquivo e 10 evidências por inspeção; grava o MIME detectado; diferencia foto de documento; e expõe `GET /api/v1/inspections/{inspectionId}/evidence/{evidenceId}/content` com autorização por vínculo.
 
-- validar extensão, MIME real e limite de 10 MB por arquivo;
-- limitar a 10 evidências por inspeção;
-- aceitar somente JPEG/JPG, PNG e PDF, conforme DEC-004;
-- oferecer download/visualização autorizado pela API;
-- garantir consistência entre o arquivo e a transação/metadados do banco;
-- definir comportamento de falha, retry e limpeza de arquivo órfão.
-
-O que já existe não deve ser descrito como “visualização de fotos concluída”: o endpoint atual retorna metadados, e o fluxo completo de acesso ao conteúdo ainda precisa ser implementado e validado.
+O storage continua selecionável por configuração: disco local no desenvolvimento e S3 privado em produção. A gravação ocorre antes do metadado, com remoção compensatória em falha de persistência/auditoria e callback de transação para falha de commit. O SDK AWS mantém retry padrão para operações S3; exclusões são idempotentes e best-effort.
 
 ## GAP-015 — recuperação de senha
 
