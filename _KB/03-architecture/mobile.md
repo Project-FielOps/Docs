@@ -1,6 +1,6 @@
 # Arquitetura do aplicativo mobile
 
-O conceito visual e os padrões de interação estão definidos em [Design do FieldOps Mobile](mobile-design.md).
+O conceito visual e os padrões de interação estão definidos em [FieldOps Mobile — Design System v1](DESIGN_SYSTEM.md) e detalhados em [mobile-design.md](mobile-design.md).
 
 ## Status e responsabilidade
 
