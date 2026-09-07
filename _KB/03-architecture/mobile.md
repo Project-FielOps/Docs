@@ -1,8 +1,10 @@
 # Arquitetura do aplicativo mobile
 
+O conceito visual e os padrões de interação estão definidos em [Design do FieldOps Mobile](mobile-design.md).
+
 ## Status e responsabilidade
 
-O aplicativo Expo/React Native é planejado pelo backlog e ainda não existe neste workspace. Ele é a experiência do técnico: baixar inspeções atribuídas, executar checklist, capturar foto, ler QR Code, registrar localização e operar sem rede. Planejamento, revisão e administração permanecem no painel web. DEC-002 restringe a execução ao técnico atribuído; DEC-003 exige reabertura explícita após reprovação.
+O aplicativo Expo SDK 57 / React Native é a experiência do técnico: baixar inspeções atribuídas, executar checklist, capturar foto, ler QR Code, registrar localização e operar sem rede. Planejamento, revisão e administração permanecem no painel web. DEC-002 restringe a execução ao técnico atribuído; DEC-003 exige reabertura explícita após reprovação. O suporte nativo do produto começa em Android 10/API 29; no iOS, o SDK 57 exige iOS 16.4 ou superior.
 
 ## Estrutura proposta
 
