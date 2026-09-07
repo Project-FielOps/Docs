@@ -68,19 +68,19 @@ Todo status usa ícone + texto + cor: `✓ Sincronizado`, `↻ Sincronizando`, `
 
 ### Tipografia
 
-Usar Inter, com `@expo-google-fonts/inter`, nos pesos 400, 500, 600 e 700.
+Usar **Nunito Sans**, com `@expo-google-fonts/nunito-sans`, nos pesos 400, 500, 600, 700 e 800. A família foi escolhida para aproximar a tipografia da marca `fieldops` apresentada na referência visual e manter boa leitura em campo. **Não usar Inter** no aplicativo.
 
 ```ts
 export const typography = {
-  display: { fontFamily: 'Inter_700Bold', fontSize: 36, lineHeight: 43 },
-  h1: { fontFamily: 'Inter_700Bold', fontSize: 30, lineHeight: 36 },
-  h2: { fontFamily: 'Inter_600SemiBold', fontSize: 24, lineHeight: 30 },
-  h3: { fontFamily: 'Inter_600SemiBold', fontSize: 20, lineHeight: 26 },
-  title: { fontFamily: 'Inter_600SemiBold', fontSize: 18, lineHeight: 24 },
-  bodyLarge: { fontFamily: 'Inter_400Regular', fontSize: 16, lineHeight: 24 },
-  body: { fontFamily: 'Inter_400Regular', fontSize: 14, lineHeight: 21 },
-  label: { fontFamily: 'Inter_500Medium', fontSize: 14, lineHeight: 20 },
-  caption: { fontFamily: 'Inter_400Regular', fontSize: 12, lineHeight: 17 },
+  display: { fontFamily: 'NunitoSans_700Bold', fontSize: 36, lineHeight: 43 },
+  h1: { fontFamily: 'NunitoSans_700Bold', fontSize: 30, lineHeight: 36 },
+  h2: { fontFamily: 'NunitoSans_600SemiBold', fontSize: 24, lineHeight: 30 },
+  h3: { fontFamily: 'NunitoSans_600SemiBold', fontSize: 20, lineHeight: 26 },
+  title: { fontFamily: 'NunitoSans_600SemiBold', fontSize: 18, lineHeight: 24 },
+  bodyLarge: { fontFamily: 'NunitoSans_400Regular', fontSize: 16, lineHeight: 24 },
+  body: { fontFamily: 'NunitoSans_400Regular', fontSize: 14, lineHeight: 21 },
+  label: { fontFamily: 'NunitoSans_500Medium', fontSize: 14, lineHeight: 20 },
+  caption: { fontFamily: 'NunitoSans_400Regular', fontSize: 12, lineHeight: 17 },
 } as const;
 ```
 
@@ -98,7 +98,7 @@ Margem horizontal padrão: 20 px. Em telas pequenas: 16 px. Cards usam 16–20 p
 
 ## Componentes
 
-- **Botões:** altura 52 px, raio 16 px, Inter SemiBold 16. Primary `#16A66A`, pressed `#0E8755`, secondary `#E7F7F0`, outline transparente com `borderStrong`, danger `#D94C4C`.
+- **Botões:** altura 52 px, raio 16 px, Nunito Sans SemiBold 16. Primary `#16A66A`, pressed `#0E8755`, secondary `#E7F7F0`, outline transparente com `borderStrong`, danger `#D94C4C`.
 - **Inputs:** mínimo 52 px, padding horizontal 16 px, raio 14 px, focus em `primary` e erro em `error`. Labels devem permanecer visíveis.
 - **Cards:** superfície branca, borda `#E2E7E4`, raio 20 px, separação por espaço/superfície/borda. Sombras só quando houver elevação real, com opacidade aproximada de 0.05.
 - **Chips:** raio full; filtro normal em `surfaceSecondary`, selecionado em `textPrimary` com texto branco, ou verde suave para filtros operacionais.
