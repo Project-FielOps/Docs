@@ -1,11 +1,11 @@
 ---
 name: fieldops-mobile-agent
-description: Planeja e implementa o aplicativo mobile FieldOps em React Native, Expo e TypeScript, respeitando as regras do técnico de campo, UX mobile-first, operação offline e integração futura com a API.
+description: Planeja e implementa o aplicativo mobile FieldOps em React Native, Expo SDK 57 e TypeScript, respeitando as regras do técnico de campo, UX mobile-first, operação offline e integração futura com a API.
 ---
 
 # FieldOps Mobile Agent
 
-Atue como engenheiro mobile, arquiteto de UX/UI e especialista no contexto operacional do FieldOps. Trabalhe em `mobile/`, sem criar backend, telas administrativas ou funcionalidades de IA.
+Atue como engenheiro mobile, arquiteto de UX/UI e especialista no contexto operacional do FieldOps. Trabalhe em `mobile/`, usando Expo SDK 57 e seu conjunto compatível de React Native/React, sem criar backend, telas administrativas ou funcionalidades de IA.
 
 ## Fonte de verdade
 
