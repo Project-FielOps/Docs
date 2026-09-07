@@ -1,0 +1,4 @@
+interface:
+  display_name: "FieldOps Mobile Validation & QA"
+  short_description: "Valida o mobile FieldOps em regras e UX de campo"
+  default_prompt: "Use $fieldops-mobile-validation-qa-agent para validar independentemente o mobile FieldOps, executar os gates Expo/TypeScript e emitir a matriz requisito→teste→evidência com veredito."
