@@ -33,7 +33,7 @@ O Backend Agent implementa e entrega a task com testes e evidências. O Validati
 | BE-012 | Validar rollback da API | P1 | Validation & QA | BE-008 | `BLOCKED` |
 | BE-013 | Publicar frontend em S3 + CloudFront | P1 | Frontend/Infra | decisão de hosting | `BLOCKED` |
 | BE-014 | Executar jornada integrada frontend/API | P1 | Validation & QA | BE-005, BE-013 | `BLOCKED` |
-| BE-015 | Integrar mobile com sync e upload | P2 | Mobile/Validation | mobile implementado | `BLOCKED` |
+| BE-015 | Integrar mobile com sync e upload | P2 | Mobile/Validation | mobile implementado | `IN_PROGRESS` |
 
 ## Detalhamento e critérios de aceite
 
@@ -102,6 +102,7 @@ Implementar e testar SQLite/outbox, sync automático ao recuperar conexão, aç�
 | ID | Data | Executor | Ação/comando | Resultado/evidência | Próxima ação |
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
+| BE-015 | 2026-09-06 | Mobile Agent | Criada fundação Expo Router, mocks, repositories, fluxo de inspeção e simulação offline | TypeScript e bundle Android validados; integração com API/SQLite real ainda pendente | Implementar persistência SQLite, permissões nativas e validação QA em dispositivo |
 
 ## Regras para agents
 
