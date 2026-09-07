@@ -95,7 +95,7 @@ Executar login, navegação autorizada, operação de inspeção, evidência e l
 
 ### BE-015 — mobile
 
-Testar sync push/pull, reenvio idempotente, retry, conflito de versão e upload com autorização. Aceite: integração real ou teste de contrato reproduzível, incluindo falhas parciais.
+Implementar e testar SQLite/outbox, sync automático ao recuperar conexão, ação `Sincronizar agora`, retry, conflito com `syncStatus = 'conflict'`, histórico restrito ao técnico autenticado, permissões de câmera/QR/GPS e upload separado. Aceite: integração real ou teste de contrato reproduzível, preservação após reinício e nenhuma remoção silenciosa de dados pendentes, com erro ou em conflito.
 
 ## Registro de execução
 

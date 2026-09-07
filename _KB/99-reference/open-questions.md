@@ -1,5 +1,7 @@
 # Questões abertas
 
+> Documento histórico de diagnóstico. As questões de sincronização, sessão, storage e QR/GPS foram substituídas ou resolvidas por decisões posteriores. Consulte `_KB/12-decisions/` e `Docs/decisions/pending.md` para o estado vigente.
+
 ## CRITICAL
 
 ### Pergunta 1 — Como a autorização por objeto será validada de forma consistente?

@@ -13,6 +13,7 @@ Esta seção registra as decisões que definem o rumo do projeto e que devem ser
 - [ADR-005-aws-storage.md](ADR-005-aws-storage.md)
 - [ADR-006-mobile-and-sync.md](ADR-006-mobile-and-sync.md)
 - [ADR-007-session-logout.md](ADR-007-session-logout.md)
+- [ADR-008-mobile-operational-policies.md](ADR-008-mobile-operational-policies.md)
 
 ## Regra de uso
 

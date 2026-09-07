@@ -22,7 +22,7 @@ No desenvolvimento, deve ser utilizado o provider alternativo de `EmailService` 
 
 O backend implementa `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull`, com contrato, limites, idempotência persistida, dependências, conflitos, cursor e autenticação documentados em [`specs/synchronization-contract.md`](../_KB/05-api/specs/synchronization-contract.md). Testes de replay, autorização, cursor e falha de operação passaram.
 
-Continuam pendentes apenas a implementação mobile da SQLite/outbox, testes no dispositivo e a resolução administrativa de conflitos no cliente.
+Continuam pendentes apenas a implementação mobile da SQLite/outbox, testes no dispositivo e a validação operacional do comportamento definido no [ADR-008](../_KB/12-decisions/ADR-008-mobile-operational-policies.md). A resolução automática de conflitos permanece fora do MVP.
 
 ## GAP-020 — cronograma e governança
 
