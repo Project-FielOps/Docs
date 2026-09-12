@@ -8,6 +8,8 @@ Execute desenvolvimento e QA em execuções separadas. O QA recebe a demanda ori
 
 O [Design System Industrial Web](../03-architecture/WEB_DESIGN_SYSTEM.md) é contrato obrigatório nas duas etapas.
 
+As tasks, specs e endpoints da interface estão em [Pendências da interface web](../11-planning/web-pendencies/README.md). Toda implementação deve indicar os IDs `WEB-T*` e `WEB-*` afetados e conferir o catálogo de endpoints antes de alterar serviços HTTP.
+
 ## Fluxo
 
 ```text
