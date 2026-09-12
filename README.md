@@ -21,7 +21,7 @@ Para agentes de IA, leia também [regras de desenvolvimento](_KB/13-ai/DEVELOPME
 | Área | Documento | Uso |
 |---|---|---|
 | Diagnóstico e fontes | [`_KB/99-reference/diagnostics/discovery.md`](_KB/99-reference/diagnostics/discovery.md), [`_KB/99-reference/sources/sources.md`](_KB/99-reference/sources/sources.md) | Evidências, lacunas, conflitos e inventário |
-| Produto e requisitos | [`_KB/01-product/README.md`](_KB/01-product/README.md) | Problema, escopo, regras, requisitos e rastreabilidade |
+| Produto e requisitos | [`_KB/01-product/README.md`](_KB/01-product/README.md), [`_KB/01-product/application-scope-and-screen-specification.md`](_KB/01-product/application-scope-and-screen-specification.md), [`_KB/01-product/mobile-screen-specification.md`](_KB/01-product/mobile-screen-specification.md) | Problema, escopo, regras, requisitos, telas, funcionalidades e aceite |
 | Especificações | [`_KB/05-api/specs/README.md`](_KB/05-api/specs/README.md) | Casos de uso e contratos implementáveis |
 | Arquitetura | [`_KB/03-architecture/`](_KB/03-architecture/), [`_KB/12-decisions/`](_KB/12-decisions/) | Limites, dados e decisões |
 | Infraestrutura e entrega | [`_KB/03-architecture/aws.md`](_KB/03-architecture/aws.md), [`_KB/08-infrastructure/deployment-plan.md`](_KB/08-infrastructure/deployment-plan.md), [`_KB/09-devops/cicd-plan.md`](_KB/09-devops/cicd-plan.md) | AWS, implantação e automação |
