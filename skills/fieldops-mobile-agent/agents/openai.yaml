@@ -1,4 +1,4 @@
 interface:
   display_name: "FieldOps Mobile Agent"
   short_description: "Desenvolve o mobile FieldOps com UX de campo"
-  default_prompt: "Use $fieldops-mobile-agent para planejar e implementar o aplicativo mobile FieldOps respeitando as regras do técnico, offline-first e Expo/TypeScript."
+  default_prompt: "Use $fieldops-mobile-agent para planejar e implementar esta mudança no mobile FieldOps respeitando o design system, as regras do técnico, offline-first, a API e Expo/TypeScript."

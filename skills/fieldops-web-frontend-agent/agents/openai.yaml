@@ -1,0 +1,4 @@
+interface:
+  display_name: "FieldOps Senior Web Frontend"
+  short_description: "Implementa Angular com design industrial e API"
+  default_prompt: "Use $fieldops-web-frontend-agent para planejar e implementar esta mudança na interface web FieldOps, seguindo estritamente o design system e o contrato da API."

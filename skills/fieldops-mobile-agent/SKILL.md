@@ -1,6 +1,6 @@
 ---
 name: fieldops-mobile-agent
-description: Planeja e implementa o aplicativo mobile FieldOps em React Native, Expo SDK 57 e TypeScript, respeitando as regras do técnico de campo, UX mobile-first, operação offline e integração futura com a API.
+description: Planeja e implementa o aplicativo mobile FieldOps em React Native, Expo SDK 57 e TypeScript, respeitando o design system, as regras do técnico, operação offline e integração com a API. Use para mudanças em mobile/; não use para frontend web ou backend.
 ---
 
 # FieldOps Mobile Agent
@@ -14,16 +14,17 @@ Antes de alterar código, leia:
 1. `../../_KB/README.md`;
 2. `../../_KB/01-product/product-mvp.md`;
 3. `../../_KB/01-product/business-rules.md`;
-4. `../../_KB/01-product/user-roles.md` e `user-flows.md`;
-5. `../../_KB/03-architecture/mobile.md`;
-6. `../../_KB/05-api/specs/inspections.md` e `synchronization-contract.md`;
-7. `../../_KB/12-decisions/ADR-002-authorization.md`, `ADR-003-rejection-reopen.md`, `ADR-006-mobile-and-sync.md` e `ADR-008-mobile-operational-policies.md`.
+4. `../../_KB/01-product/user-roles.md` e `../../_KB/01-product/user-flows.md`;
+5. integralmente `../../_KB/03-architecture/DESIGN_SYSTEM.md`;
+6. `../../_KB/03-architecture/mobile.md` e `../../_KB/03-architecture/mobile-design.md`;
+7. `../../_KB/05-api/specs/inspections.md` e `../../_KB/05-api/specs/synchronization-contract.md`;
+8. `../../_KB/12-decisions/ADR-002-authorization.md`, `ADR-003-rejection-reopen.md`, `ADR-006-mobile-and-sync.md` e `ADR-008-mobile-operational-policies.md`.
 
-Documentação normativa prevalece sobre código, mocks ou preferência visual. Se houver lacuna ou conflito, registre `DOCUMENTATION_GAP`/`DOCUMENTATION_CONFLICT` e não invente comportamento oficial.
+Documentação normativa prevalece sobre código, mocks ou preferência visual. O `DESIGN_SYSTEM.md` é o contrato obrigatório de aparência e interação do mobile; não o substitua por preferência pessoal ou defaults de biblioteca. Se houver lacuna ou conflito, registre `DOCUMENTATION_GAP`, `DOCUMENTATION_CONFLICT` ou `DESIGN_SYSTEM_GAP` e não invente comportamento oficial.
 
-## Primeira execução
+## Planejamento proporcional
 
-Quando o usuário solicitar o desenvolvimento sem plano aprovado, faça apenas análise de documentação/repositório, levantamento de regras, arquitetura, telas, navegação, design system, mascote, mocks, offline e etapas. Pare para aprovação humana. Depois de aprovado, implemente por incrementos pequenos e valide cada etapa.
+Apresente um plano e aguarde aprovação humana somente quando a mudança for relevante: novo fluxo ou tela, arquitetura/offline/sync, contrato de API, autenticação/autorização, persistência, evidência/permissão nativa, componente ou token compartilhado, navegação ou mais de uma feature. Para correção mecânica isolada e de baixo risco, registre análise abreviada, implemente diretamente e valide de forma proporcional. Depois de um plano aprovado, implemente por incrementos pequenos e valide cada etapa.
 
 ## Regras funcionais obrigatórias
 

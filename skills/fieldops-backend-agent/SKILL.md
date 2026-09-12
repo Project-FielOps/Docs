@@ -37,4 +37,4 @@ Crie ou atualize testes que provem o requisito, incluindo autorização, caso ne
 
 Execute primeiro testes direcionados e depois, conforme risco, `mvn test` e `mvn package` em `API/`. Docker é necessário para Testcontainers. Diferencie falha da mudança, falha preexistente e impedimento ambiental.
 
-Produza um handoff `READY_FOR_VALIDATION`, nunca `APPROVED`, com requisitos, arquivos, decisões, testes, comandos/resultados, riscos residuais e todos os marcadores documentais. O Validation & QA Agent é quem emite o veredito.
+Produza um handoff `READY_FOR_VALIDATION`, nunca `APPROVED`, com requisitos, arquivos, decisões, testes, comandos/resultados, riscos residuais e todos os marcadores documentais. O Backend Validation & QA Agent é quem emite o veredito.

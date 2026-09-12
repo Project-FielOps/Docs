@@ -1,5 +1,7 @@
 # Guia de desenvolvimento
 
+Para mudanças na interface administrativa, use o [workflow dos agentes web](web-agent-workflow.md): o agente frontend implementa e entrega `READY_FOR_WEB_QA`, e o agente QA realiza a validação independente contra o design system, os requisitos e a API.
+
 ## Antes de alterar código
 
 Leia `_KB/README.md`, `_KB/01-product/product-mvp.md`, a especificação do domínio e `_KB/12-decisions/architecture-decisions.md`. Identifique RN/FR/AC afetados. Se a alteração for nova decisão, atualize a decisão correspondente antes do contrato.

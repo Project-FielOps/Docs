@@ -1,4 +1,4 @@
 interface:
-  display_name: "FieldOps Validation & QA"
-  short_description: "Valida mudanças do FieldOps com independência"
-  default_prompt: "Use $fieldops-validation-qa-agent para revisar e validar esta alteração do FieldOps. Exija mvn clean test e mvn clean package, teste diretamente cada método novo de integração e apresente a matriz requisito→teste→evidência antes do veredito."
+  display_name: "FieldOps Backend Validation & QA"
+  short_description: "Valida independentemente o backend e a API"
+  default_prompt: "Use $fieldops-validation-qa-agent para revisar e validar esta alteração no backend/API FieldOps. Exija mvn clean test e mvn clean package, teste diretamente cada método novo de integração e apresente a matriz requisito→teste→evidência antes do veredito."

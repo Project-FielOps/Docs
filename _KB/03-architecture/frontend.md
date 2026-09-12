@@ -1,5 +1,7 @@
 # Arquitetura da interface administrativa
 
+O conceito visual, os tokens e os padrões de interação estão definidos em [FieldOps Web — Design System Industrial v1](WEB_DESIGN_SYSTEM.md).
+
 ## Estado atual
 
 O painel está em `interface-administrativa/` e usa Angular 22, TypeScript estrito, componentes standalone, Angular Material, SCSS e Vitest. Ele atende administração, planejamento e revisão; não substitui o app de campo.
@@ -12,4 +14,4 @@ Serviços por feature consomem a API. O interceptor de autenticação envia o to
 
 ## Regras de experiência
 
-Cada tela de dados trata carregamento, vazio, erro e conteúdo. Formulários reativos exibem erros de campo retornados pela API. Controles de ação devem respeitar o papel do usuário e o estado da inspeção, mas a API continua sendo a autoridade. Acessibilidade mínima inclui contraste, erro próximo ao campo e status que não dependem só de cor.
+Cada tela de dados trata carregamento, vazio, sem resultado, erro, sucesso, permissão e ação em processamento. Formulários reativos exibem erros de campo retornados pela API e preservam os dados em falhas recuperáveis. Controles de ação devem respeitar o papel do usuário e o estado da inspeção, mas a API continua sendo a autoridade. As telas principais devem buscar WCAG 2.1 AA, com contraste, foco visível, operação por teclado, erro próximo ao campo e status que não dependem só de cor.

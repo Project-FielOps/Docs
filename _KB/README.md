@@ -43,6 +43,7 @@ Hierarquia de autoridade:
 ## Quick Navigation
 
 - Arquitetura: [03-architecture/system-overview.md](03-architecture/system-overview.md) e [AWS](03-architecture/aws.md)
+- Design systems: [interface administrativa](03-architecture/WEB_DESIGN_SYSTEM.md) e [aplicativo mobile](03-architecture/DESIGN_SYSTEM.md)
 - Domínio: [02-domain/domain-overview.md](02-domain/domain-overview.md)
 - Regras de negócio: [01-product/product-business-rules.md](01-product/product-business-rules.md)
 - APIs: [05-api/api-overview.md](05-api/api-overview.md)

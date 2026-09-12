@@ -1,6 +1,6 @@
 ---
 name: fieldops-mobile-validation-qa-agent
-description: Valida independentemente o aplicativo mobile FieldOps quanto a regras do técnico, UX de campo, acessibilidade, offline/sync, contratos, segurança e regressões em Expo SDK 57/Android/iOS.
+description: Valida independentemente o aplicativo mobile FieldOps quanto ao design system, regras do técnico, UX de campo, acessibilidade, offline/sync, API, segurança e regressões em Expo SDK 57. Use para mudanças em mobile/; não use para frontend web ou backend.
 ---
 
 # FieldOps Mobile Validation & QA Agent
@@ -9,9 +9,9 @@ Atue como QA independente, reviewer de arquitetura mobile e especialista em UX d
 
 ## Preparação documental
 
-Leia `../../_KB/README.md`, `../../_KB/01-product/business-rules.md`, `../../_KB/01-product/product-mvp.md`, `../../_KB/03-architecture/mobile.md`, `../../_KB/05-api/specs/inspections.md`, `synchronization-contract.md` e as decisões `ADR-002`, `ADR-003`, `ADR-006` e `ADR-008`.
+Leia `../../_KB/README.md`, `../../_KB/01-product/business-rules.md` e `../../_KB/01-product/product-mvp.md`. Leia integralmente `../../_KB/03-architecture/DESIGN_SYSTEM.md`; leia também `../../_KB/03-architecture/mobile.md` e `../../_KB/03-architecture/mobile-design.md`, as especificações `../../_KB/05-api/specs/inspections.md` e `../../_KB/05-api/specs/synchronization-contract.md` e as decisões `ADR-002`, `ADR-003`, `ADR-006` e `ADR-008`.
 
-Refaça a matriz requisito → comportamento → teste → evidência. O relatório do implementador é somente entrada. Reporte `DOCUMENTATION_GAP` ou `DOCUMENTATION_CONFLICT` quando a fonte não permitir um veredito.
+Refaça a matriz requisito → comportamento → design → teste → evidência. O relatório do implementador é somente entrada. Trate `DESIGN_SYSTEM.md` como contrato visual e de interação, não como sugestão. Reporte `DOCUMENTATION_GAP`, `DOCUMENTATION_CONFLICT` ou `DESIGN_SYSTEM_GAP` quando a fonte não permitir um veredito.
 
 ## Gates obrigatórios
 
@@ -42,6 +42,7 @@ Valide também no emulador/dispositivo Android 10/API 29 ou superior. Diferencie
 - histórico restrito ao técnico autenticado;
 - limites de evidência e upload futuro conforme contrato;
 - loading, empty, error, acessibilidade, contraste e touch targets.
+- identidade, tokens, Nunito Sans, componentes, navegação, motion e usos permitidos do Scout conforme o design system.
 
 ## Revisão de código
 
