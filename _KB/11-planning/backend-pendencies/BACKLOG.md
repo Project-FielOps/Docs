@@ -33,7 +33,7 @@ O Backend Agent implementa e entrega a task com testes e evidências. O Validati
 | BE-012 | Validar rollback da API | P1 | Validation & QA | BE-008 | `BLOCKED` |
 | BE-013 | Publicar frontend em S3 + CloudFront | P1 | Frontend/Infra | decisão de hosting | `BLOCKED` |
 | BE-014 | Executar jornada integrada frontend/API | P1 | Validation & QA | BE-005, BE-013 | `BLOCKED` |
-| BE-015 | Integrar mobile com sync e upload | P2 | Mobile/Validation | mobile implementado | `IN_PROGRESS` |
+| BE-015 | Integrar mobile com sync e upload | P0 | Mobile/Validation | contratos e mobile implementado | `IN_PROGRESS` |
 
 ## Detalhamento e critérios de aceite
 
@@ -96,6 +96,8 @@ Executar login, navegação autorizada, operação de inspeção, evidência e l
 ### BE-015 — mobile
 
 Implementar e testar SQLite/outbox, sync automático ao recuperar conexão, ação `Sincronizar agora`, retry, conflito com `syncStatus = 'conflict'`, histórico restrito ao técnico autenticado, permissões de câmera/QR/GPS e upload separado. Aceite: integração real ou teste de contrato reproduzível, preservação após reinício e nenhuma remoção silenciosa de dados pendentes, com erro ou em conflito.
+
+Em 2026-09-12, o escopo foi reclassificado de P2 para P0 porque mobile/offline/sync integram o MVP. As lacunas de feed remoto, atribuíveis, QR/GPS, NC e idempotência de upload e suas dependências web estão detalhadas no [plano integrado](../mvp-integration-plan.md). O backend de push/pull existente não comprova a jornada ponta a ponta.
 
 ## Registro de execução
 

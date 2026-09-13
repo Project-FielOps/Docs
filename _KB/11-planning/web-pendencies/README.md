@@ -43,7 +43,7 @@ Referências obrigatórias:
 
 ## Interpretação do estado atual
 
-Rotas e componentes encontrados no Angular são evidência de implementação parcial, não de aceite. Em 2026-09-12, o frontend possui as rotas principais e serviços HTTP, porém somente `src/app/app.spec.ts` foi encontrado como teste automatizado. Não há evidência versionada suficiente para declarar as superfícies web concluídas contra API real, design system e WCAG 2.1 AA.
+Rotas e componentes encontrados no Angular são evidência de implementação parcial, não de aceite. Em 2026-09-12, o frontend possui as rotas principais, serviços HTTP e alguns testes de componentes compartilhados (`app`, `shell`, `status-badge` e `state-container`). Ainda não há evidência versionada suficiente para declarar as superfícies web concluídas contra API real, design system e WCAG 2.1 AA. As dependências cruzadas com API/mobile estão no [plano integrado](../mvp-integration-plan.md).
 
 Por isso, este backlog usa `IN_PROGRESS` para áreas parcialmente presentes e mantém o aceite pendente até o ciclo Frontend Agent → Web QA Agent.
 
@@ -55,4 +55,3 @@ Por isso, este backlog usa `IN_PROGRESS` para áreas parcialmente presentes e ma
 4. Mock não comprova integração; build não comprova comportamento; screenshot não comprova interação.
 5. Uma lacuna de API deve ser tratada como dependência `API_GAP`, nunca resolvida inventando endpoint no frontend.
 6. Após aprovação, criar commit local apenas com o escopo validado; nunca executar `git push`.
-

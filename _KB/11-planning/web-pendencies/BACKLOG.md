@@ -25,7 +25,7 @@ Fluxo: `BACKLOG → READY → IN_PROGRESS → VALIDATION → DONE`. `CHANGES_REQ
 | WEB-T008 | WEB-02 | Fechar guards, 401/403 e matriz de navegação ADMIN/SUPERVISOR | P0 | WEB-T005 | `IN_PROGRESS` |
 | WEB-T009 | WEB-03 | Integrar e validar dashboard mínimo | P0 | WEB-T003, WEB-T008 | `IN_PROGRESS` |
 | WEB-T010 | WEB-04 | Completar usuários, paginação, status e validações | P0 | WEB-T003, WEB-T008 | `IN_PROGRESS` |
-| WEB-T011 | WEB-04 | Usar técnicos atribuíveis no planejamento | P0 | WEB-T010 | `READY` |
+| WEB-T011 | WEB-04 | Usar técnicos e supervisores autorizados no planejamento | P0 | API-GAP-007, WEB-T010 | `BLOCKED` |
 | WEB-T012 | WEB-05 | Completar clientes e drill-down para locais | P0 | WEB-T003 | `IN_PROGRESS` |
 | WEB-T013 | WEB-06 | Completar locais no contexto do cliente | P0 | WEB-T012 | `IN_PROGRESS` |
 | WEB-T014 | WEB-06 | Resolver UX/contrato da rota global de locais | P1 | API-GAP-001 | `BLOCKED` |
@@ -68,6 +68,9 @@ Estas lacunas são dependências, não autorização para o Frontend Agent alter
 | API-GAP-004 | listagem global de não conformidades | criar endpoint paginado autorizado ou retirar rota global do MVP | WEB-T031 |
 | API-GAP-005 | auditoria por período/ação/inspeção/motivo | ampliar `GET /audit-events` | WEB-T033 |
 | API-GAP-006 | busca textual de usuário | ampliar `GET /users` ou limitar UI a papel/status | melhoria de WEB-T010 |
+| API-GAP-007 | seleção de técnicos e supervisores por SUPERVISOR | `/users` é ADMIN-only e `/users/assignable` devolve só técnicos; definir consulta autorizada de atribuíveis por papel/escopo | WEB-T011/024 e filtros de WEB-T022 |
+
+O detalhamento interaplicações e a decisão D02 estão no [plano integrado do MVP](../mvp-integration-plan.md). A tela de planejamento hoje chama `UsersService.list()` para ambos os papéis, portanto sua existência não demonstra funcionamento para SUPERVISOR.
 
 ## Critérios por grupo
 

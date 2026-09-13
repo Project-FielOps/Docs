@@ -56,6 +56,8 @@ Hierarquia de autoridade:
 - Decisões: [12-decisions/README.md](12-decisions/README.md)
 - Planejamento: [11-planning/roadmap.md](11-planning/roadmap.md)
 - Pendências web: [11-planning/web-pendencies/README.md](11-planning/web-pendencies/README.md)
+- Pendências mobile: [11-planning/mobile-pendencies.md](11-planning/mobile-pendencies.md)
+- Plano integrado do MVP: [11-planning/mvp-integration-plan.md](11-planning/mvp-integration-plan.md)
 
 ## Fontes originais
 

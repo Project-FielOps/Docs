@@ -68,3 +68,11 @@ Ainda faltam evidências para concluir o aceite do produto:
 ## Itens já definidos e não pendentes de decisão
 
 Não são novas perguntas de produto: autorização por responsável, correção pós-reprovação, GPS/QR, formatos e limites de evidência, política de conflitos, prazo de revisão, dashboard mínimo, AWS como requisito e entrega até novembro já estão decididos. O que permanece aberto nesses temas é implementação, detalhamento técnico ou evidência de aceite, conforme as seções acima.
+
+## Revisão de integração das três aplicações — 2026-09-12
+
+O [plano integrado do MVP](../_KB/11-planning/mvp-integration-plan.md) registrou oito decisões técnicas (D01–D08): feed de mudanças remotas para o mobile; consulta autorizada de técnicos/supervisores para o painel; persistência de QR/GPS/ausência; NC offline idempotente; reconciliação de upload após timeout; isolamento do cache no logout; dados derivados do card mobile; e escopo das rotas/filtros globais do painel. **D01–D08 foram aprovadas em 2026-09-12** e constam do [ADR-009](../_KB/12-decisions/ADR-009-mvp-cross-app-integration.md). O detalhamento de schemas e a implementação permanecem pendentes.
+
+Conta/região/orçamento, Terraform, gates e SES foram detalhados como [proposta operacional](delivery-decisions-proposal.md); ainda faltam valores, responsáveis e aprovação operacional específica. A aprovação do ADR-009 não marca esses itens como concluídos.
+
+A análise estática também encontrou desvios de implementação, que não exigem rediscutir decisões já aprovadas: `InspectionService` aceita ADMIN como `supervisorId`; o backend permite ao técnico apagar evidência já enviada em inspeção não aprovada; o feed atual de pull não publica alterações feitas pelo painel; e o planejamento web chama `/users`, restrito a ADMIN, apesar de `/users/assignable` só listar técnicos. Os dois primeiros violam DEC-002/010. A afirmação anterior nesta página de que ao sync mobile faltavam **apenas** SQLite/outbox e teste em dispositivo está superada por esse levantamento; o push/pull existente continua válido para as operações que suporta, mas não fecha a integração das três aplicações.
