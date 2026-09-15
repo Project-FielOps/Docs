@@ -62,4 +62,4 @@ Depois, subir a API e o frontend localmente e validar login, refresh/logout, aut
 
 ## Estado atual
 
-Este documento define o desenho e a sequência de implementação. O workspace ainda não contém workflow GitHub Actions nem IaC provisionada. Antes de codificar os workflows, confirmar conta, região, domínios, estratégia de IaC e ambiente-alvo.
+O workspace agora contém o workflow inicial de CI da API em `API/.github/workflows/ci.yml`, com Java 21, `mvn clean verify`, artefato JAR e build da imagem Docker. A execução remota ainda precisa ser validada no GitHub Actions. Não há IaC provisionada, CD AWS ou ambiente publicado; antes dessas etapas, confirmar conta, região, domínios, estratégia de IaC e ambiente-alvo.

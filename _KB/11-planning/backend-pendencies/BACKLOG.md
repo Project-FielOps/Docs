@@ -25,9 +25,9 @@ O Backend Agent implementa e entrega a task com testes e evidências. O Validati
 | BE-004 | Configurar ALB, ACM, Route 53 e ECS Fargate | P0 | Backend/Infra | BE-003 | `BLOCKED` |
 | BE-005 | Validar a API implantada na AWS | P0 | Validation & QA | BE-004 | `BLOCKED` |
 | BE-006 | Configurar identidade e envio pelo Amazon SES | P1 | Backend/Infra | conta AWS autorizada | `BLOCKED` |
-| BE-007 | Implementar CI da API no GitHub Actions | P0 | Backend Agent | — | `READY` |
+| BE-007 | Implementar CI da API no GitHub Actions | P0 | Backend Agent | — | `VALIDATION` |
 | BE-008 | Implementar CD ECR → ECS com OIDC | P0 | Backend/Infra | BE-002, BE-003 | `BLOCKED` |
-| BE-009 | Executar testes de carga e medir p95 | P1 | Validation & QA | ambiente executável | `READY` |
+| BE-009 | Executar testes de carga e medir p95 | P1 | Validation & QA | ambiente executável | `VALIDATION` |
 | BE-010 | Configurar logs, métricas, alarmes e correlação | P1 | Backend/Infra | BE-004 | `BLOCKED` |
 | BE-011 | Validar backup e restauração do RDS | P1 | Validation & QA | BE-003 | `BLOCKED` |
 | BE-012 | Validar rollback da API | P1 | Validation & QA | BE-008 | `BLOCKED` |
@@ -104,7 +104,12 @@ Em 2026-09-12, o escopo foi reclassificado de P2 para P0 porque mobile/offline/s
 | ID | Data | Executor | Ação/comando | Resultado/evidência | Próxima ação |
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
+| BE-001 | 2026-09-14 | Backend Agent | Reauditado `aws configure list` e executado `aws sts get-caller-identity`; verificado também `git ls-remote origin HEAD` | O perfil usa região `sa-east-1`, mas a credencial retorna `InvalidClientTokenId`; o remoto GitHub não pôde ser consultado porque `github.com` não resolveu no ambiente | Configurar credencial AWS válida, confirmar conta/região/domínio/ambientes e disponibilizar acesso ao GitHub para validar o workflow |
+| BE-007 | 2026-09-14 | Backend Agent | Adicionados Dockerfile multi-stage, `.dockerignore` e `.github/workflows/ci.yml`; `mvn clean verify` com Java 21 passou com 30 testes e `docker build --tag fieldops-api:local .` concluiu com sucesso | Aguardando execução do workflow no GitHub para validar o runner e o upload do artefato | Executar o workflow em um push/PR e registrar o run; depois marcar `DONE` |
+| BE-007 | 2026-09-14 | Backend Agent | Consulta externa a `git ls-remote origin HEAD` retornou o commit remoto `b237bd4`; inspeção do commit não encontrou `.github/workflows` e a API pública de Actions retornou `404` | O acesso ao remoto está funcional, mas o workflow local ainda não foi publicado nem há execução remota verificável | Publicar os arquivos do CI no repositório e registrar a execução do workflow; depois marcar `DONE` |
+| BE-009 | 2026-09-14 | Backend Agent | Adicionados `API/scripts/load-test.sh` e `API/scripts/smoke-test.sh`; validação local da imagem com PostgreSQL existente: smoke `UP` + `X-Request-ID`, 100 requisições, concorrência 10, 0 erros, p95 `18.617 ms` | Aceite local comprovado; medição contra AWS ainda não é possível enquanto o token AWS estiver inválido e não houver endpoint publicado | Repetir contra o ambiente AWS e registrar evidência de produção/homologação; depois marcar `DONE` |
 | BE-015 | 2026-09-06 | Mobile Agent | Criada fundação Expo Router, mocks, repositories, fluxo de inspeção e simulação offline | TypeScript e bundle Android validados; integração com API/SQLite real ainda pendente | Implementar persistência SQLite, permissões nativas e validação QA em dispositivo |
+| BE-015 | 2026-09-14 | Backend Agent | `npm ci --ignore-scripts` passou após versionar `mobile/.npmrc` com `legacy-peer-deps=true`; corrigido cast de estilo em `mobile/src/components/ui.tsx`; `npm run typecheck` passou | Instalação limpa e typecheck reproduzíveis; ainda sem teste em dispositivo/integração real com API, e a implementação usa AsyncStorage/outbox | Validar push/pull/upload em dispositivo e ambiente executável e documentar o resultado |
 
 ## Regras para agents
 
