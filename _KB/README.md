@@ -54,7 +54,7 @@ Hierarquia de autoridade:
 - CI/CD: [09-devops/cicd-plan.md](09-devops/cicd-plan.md)
 - Testes: [10-quality/testing.md](10-quality/testing.md)
 - Decisões: [12-decisions/README.md](12-decisions/README.md)
-- Planejamento: [11-planning/roadmap.md](11-planning/roadmap.md)
+- Planejamento: [11-planning/roadmap.md](11-planning/roadmap.md), [organograma e Matriz RACI](11-planning/organograma-raci.md)
 - Pendências web: [11-planning/web-pendencies/README.md](11-planning/web-pendencies/README.md)
 - Pendências mobile: [11-planning/mobile-pendencies.md](11-planning/mobile-pendencies.md)
 - Plano integrado do MVP: [11-planning/mvp-integration-plan.md](11-planning/mvp-integration-plan.md)
