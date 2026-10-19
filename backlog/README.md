@@ -38,7 +38,7 @@ Use `BLOCKED` somente quando a dependência estiver claramente identificada e n�
 | FO-002 | Planejamento e usuários atribuíveis | P0 | BLOCKED | [FO-002.md](FO-002.md) |
 | FO-003 | Detalhe, revisão e evidências no web | P0 | IN_PROGRESS | [FO-003.md](FO-003.md) |
 | FO-004 | Dashboard, listas e filtros reais | P0/P1 | DONE | [FO-004.md](FO-004.md) |
-| FO-005 | Recuperação e troca de senha | P0 | READY | [FO-005.md](FO-005.md) |
+| FO-005 | Recuperação e troca de senha | P0 | DONE | [FO-005.md](FO-005.md) |
 | FO-006 | Qualidade frontend, acessibilidade e regressão visual | P0 | READY | [FO-006.md](FO-006.md) |
 | FO-007 | Persistência offline do mobile | P0 | BLOCKED | [FO-007.md](FO-007.md) |
 | FO-008 | Sync incremental, NC e conflitos | P0 | BLOCKED | [FO-008.md](FO-008.md) |
