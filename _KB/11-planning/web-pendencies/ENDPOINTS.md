@@ -40,7 +40,7 @@ Este catálogo descreve consumo, não substitui OpenAPI nem os DTOs do backend.
 | GET | `/users/{id}` | UUID | detalhe/edição | `AVAILABLE` |
 | PUT | `/users/{id}` | `UpdateUserRequest` | editar | `AVAILABLE` |
 | PATCH | `/users/{id}/status` | `{status}` | ativar/inativar/bloquear conforme enum | `AVAILABLE` |
-| GET | `/users/assignable` | `page`, `size`, `sort` | técnicos ativos atribuíveis | `AVAILABLE` |
+| GET | `/users/assignable` | `role=TECHNICIAN\|SUPERVISOR`, `status`, `page`, `size`, `sort` | usuários ativos atribuíveis no escopo global único do MVP; somente ADMIN/SUPERVISOR | `AVAILABLE` |
 | GET | `/users?search=...` | busca textual | nome/e-mail na listagem | `API_GAP` |
 
 ## Clientes

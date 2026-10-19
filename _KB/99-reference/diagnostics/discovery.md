@@ -93,7 +93,7 @@ Os GAPs abaixo foram corrigidos no backend e revisados pelo fluxo independente d
 | GAP-003 | Implementado corretamente | `REJECTED` exige `POST /reopen-correction` antes de resposta ou submissão |
 | GAP-004 | Implementado corretamente | Atualizações de resposta registram valores anterior/novo em auditoria sem conteúdo sensível adicional |
 | GAP-011 | Implementado corretamente | Erros expõem `requestId` e `fieldErrors` conforme contrato canônico |
-| GAP-012 | Implementado corretamente | `GET /api/v1/users/assignable` retorna somente técnicos ativos para ADMIN/SUPERVISOR; gestão permanece ADMIN-only |
+| GAP-012 | Implementado corretamente para o escopo global do MVP | `GET /api/v1/users/assignable` aceita papel/status/paginação e retorna somente técnicos ou supervisores ativos para ADMIN/SUPERVISOR; gestão permanece ADMIN-only. Escopo por cliente/local não existe no modelo atual e foi explicitamente deixado para evolução posterior |
 | GAP-014 | Implementado corretamente | Storage selecionável por configuração: disco local no desenvolvimento e S3 privado em produção, com bucket/região externos e credenciais AWS padrão |
 | GAP-013 | Implementado corretamente | JPEG/JPG, PNG e PDF com assinatura binária, 10 MB/arquivo, 10/inspeção, download autorizado e compensação transacional; `EvidenceServiceTest` e suíte completa passaram |
 | GAP-015 | Implementado corretamente | Recuperação por token opaco com hash SHA-256, 30 minutos, uso único, Amazon SES configurável, resposta anti-enumeração, reset transacional com revogação de sessões e senha temporária obrigatória |
