@@ -350,6 +350,20 @@ Todas as telas devem possuir loading, vazio, erro, sucesso e autorização; muta
 
 Uma tela só é pronta quando possui rota, fluxo completo, contrato vigente, autorização no backend, persistência adequada, auditoria, testes permitidos/proibidos e, no mobile offline, recuperação após reinício e sem rede. Não usar mock, “simular” ou valor estático no caminho de produção.
 
+### 8.1 Verificação operacional de usabilidade
+
+Esta verificação complementa os critérios de aceite das telas; não substitui pesquisa com usuários nem declara que ela foi realizada. QA deve executar os cenários com os papéis e dados de teste previstos e guardar resultado reproduzível.
+
+| Cenário | Critério observável de aprovação |
+|---|---|
+| Planejar uma inspeção | ADMIN/SUPERVISOR identifica os campos obrigatórios antes de enviar; erro informa o campo e como corrigir; após falha recuperável, os valores já preenchidos permanecem. |
+| Executar checklist no mobile | Técnico distingue claramente item respondido, obrigatório pendente e ação disponível; salvar/erro offline informa se o dado ficou local ou foi sincronizado. |
+| Revisar uma inspeção | Supervisor identifica responsável, estado e evidências antes de decidir; reprovação informa que o motivo é obrigatório; decisão inválida não apaga o contexto. |
+| Encontrar dados | Busca sem correspondência informa “sem resultados” e permite ajustar filtros; estado vazio inicial sugere somente uma ação disponível e autorizada. |
+| Recuperar erro | Mensagem nomeia o que falhou e a próxima ação segura; retry não cria duplicação; ação em andamento não pode ser enviada repetidamente. |
+
+Para cada cenário, registrar papel, ambiente, dados de teste, resultado observado e evidência. `PASS` exige todos os critérios da linha; comportamento não observado ou apenas inferido do código fica `NOT RUN`, não `PASS`. A revisão de acessibilidade segue o checklist próprio em [WEB-ACCESSIBILITY-AUDIT](../11-planning/web-pendencies/WEB-ACCESSIBILITY-AUDIT.md).
+
 ## 9. Aceite ponta a ponta do MVP
 
 1. ADMIN cria usuários ativos e cadastros.
