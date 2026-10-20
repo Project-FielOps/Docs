@@ -19,3 +19,29 @@
 | NFR-015 | Logs são estruturados, possuem correlation ID, registram erros e API expõe health check | Inspeção de logs e `/actuator/health` |
 
 Os limites e metas acima são definidos por DEC-004, DEC-005, DEC-010 e DEC-011. A exclusão física automática de arquivos não é exigida no MVP.
+
+## Rastreabilidade e gate de verificação
+
+Todos os requisitos abaixo são gates do MVP. O componente responsável prepara a evidência; QA registra o resultado e o ambiente. Código ou endpoint existente, sem execução e resultado registrados, não equivale a aceite.
+
+| ID | Superfície responsável | Gate de verificação |
+|---|---|---|
+| NFR-001 | Mobile | Fechar e reabrir o app com operações pendentes; comparar respostas, evidências e fila antes/depois. |
+| NFR-002 | API | Exercitar erros de validação e autorização; verificar payload e logs sem stack trace, segredo ou token. |
+| NFR-003 | API | Matriz 401/403 por perfil, responsável e objeto; incluir acesso cruzado entre inspeções. |
+| NFR-004 | API | Verificar metadados de paginação, limites e navegação em listagens administrativas. |
+| NFR-005 | API + mobile | Repetir operações e simular falha parcial; comprovar ausência de duplicação e cursor só após persistência. |
+| NFR-006 | Plataforma | Revisar configuração do ambiente publicado, redirecionamento HTTPS e origem dos segredos; guardar referência não sensível ao deploy. |
+| NFR-007 | API + mobile | Cobrir formatos/tamanhos válidos e inválidos, limite por inspeção, acesso autorizado e persistência. |
+| NFR-008 | Web | Testar loading, vazio, sem resultados, erro, permissão e mutação em processamento em telas críticas. |
+| NFR-009 | Mobile | Negar cada permissão em dispositivo/emulador; comprovar continuidade do trabalho e ausência de perda de dados. |
+| NFR-010 | API | Subir banco limpo com Flyway, validar schema e executar a suíte automatizada. |
+| NFR-011 | Todas | Comparar OpenAPI, DTOs, READMEs e contratos consumidos; registrar divergências e correções. |
+| NFR-012 | Plataforma | Conferir ambientes, logs, health check, backup e controles de acesso no runbook e no ambiente implantado. |
+| NFR-013 | Web | Executar checklist WCAG 2.1 AA com método, ambiente, evidência e resultado por critério; ver checklist de [auditoria de acessibilidade](../11-planning/web-pendencies/WEB-ACCESSIBILITY-AUDIT.md). |
+| NFR-014 | API | Medir p95 em carga controlada, identificando dataset, concorrência, duração e exclusões aplicadas. |
+| NFR-015 | API + plataforma | Correlacionar requisição de ponta a ponta, inspecionar logs estruturados e consultar `/actuator/health`. |
+
+### Registro mínimo de evidência
+
+Para cada execução, registrar ID do requisito, resultado (`PASS`, `FAIL`, `BLOCKED` ou `NOT RUN`), data, versão/commit, ambiente, passos, resultado observado e link para artefato não sensível. Em caso de falha ou bloqueio, registrar responsável e próxima ação. Não anexar tokens, dados pessoais desnecessários, segredos ou evidências de cliente sem autorização.
