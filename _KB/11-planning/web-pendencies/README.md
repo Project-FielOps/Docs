@@ -9,6 +9,8 @@ Este diretório é a fonte operacional das pendências de `interface-administrat
 - [WEB-SPECS.md](WEB-SPECS.md): comportamento esperado das superfícies web, critérios de aceite e dependências.
 - [ENDPOINTS.md](ENDPOINTS.md): catálogo de consumo `/api/v1`, disponibilidade atual e lacunas de contrato.
 - [BACKLOG.md](BACKLOG.md): tasks, prioridade, dependências, status e ordem recomendada.
+- [WEB-ACCESSIBILITY-AUDIT.md](WEB-ACCESSIBILITY-AUDIT.md): checklist WCAG 2.1 AA com critérios e campos para evidência por tela/estado.
+- [WEB-API-VALIDATION-PLAN.md](WEB-API-VALIDATION-PLAN.md): inventário estático, comandos e cenários de validação web/API.
 
 ## Escopo
 
