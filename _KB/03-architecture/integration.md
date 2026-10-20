@@ -15,7 +15,7 @@ Esse fluxo é a referência para IVH-001, IVH-005, IVH-006 e IVH-007. Dados de d
 
 ## Sincronização
 
-DEC-013 aprovou operações separadas: `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull?cursor=...`, com resultados por operação, `operationId` idempotente, cursor somente após persistência e upload de evidência separado. O payload e parâmetros operacionais continuam em [specification de sync](../05-api/specs/synchronization-contract.md). Esses endpoints ainda não existem no código observado.
+DEC-013 aprovou operações separadas: `POST /api/v1/mobile/sync/push` e `GET /api/v1/mobile/sync/pull?cursor=...`, com resultados por operação, `operationId` idempotente, cursor somente após persistência e upload de evidência separado. O payload e parâmetros operacionais continuam em [contrato de sync](../05-api/specs/synchronization-contract.md). Na rechecagem estática da API em 2026-10-20, não foram encontrados controllers/rotas para push ou pull nem `SyncService`; a decisão aprovada não é evidência de implementação. A validação e as lacunas atuais estão no [plano integrado do MVP](../11-planning/mvp-integration-plan.md) e no [registro de validação integrada](../11-planning/MVP-INTEGRATED-TEST-RECORD.md).
 
 Em qualquer alternativa, a API deve reconhecer a chave idempotente, devolver resultado por operação e manter a inspeção aprovada protegida. Falhas parciais preservam a outbox; reenvio não pode duplicar resposta, evidência ou transição.
 
