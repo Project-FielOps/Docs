@@ -1,7 +1,7 @@
 # Plano de validação web/API
 
-**Escopo:** validação das integrações do painel administrativo com a API no MVP.  
-**Estado:** plano baseado em inspeção estática dos clones atuais; comandos e cenários ainda precisam ser executados e registrados.  
+**Escopo:** validação das integrações do painel administrativo com a API no MVP.
+**Estado:** plano baseado em inspeção estática dos clones atuais; comandos e cenários ainda precisam ser executados e registrados.
 **Bloqueios para aceite integrado:** confirmar resolução de `ARC-027` e `IVH-001` com seus responsáveis.
 
 ## Evidência existente no snapshot revisado

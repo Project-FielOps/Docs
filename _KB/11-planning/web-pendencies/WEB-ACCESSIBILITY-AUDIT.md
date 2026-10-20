@@ -1,7 +1,7 @@
 # Checklist de auditoria de acessibilidade web
 
-**Escopo:** painel administrativo web, telas principais do MVP.  
-**Referência normativa:** WCAG 2.1 nível AA, DEC-011 e NFR-013.  
+**Escopo:** painel administrativo web, telas principais do MVP.
+**Referência normativa:** WCAG 2.1 nível AA, DEC-011 e NFR-013.
 **Estado:** roteiro de execução; nenhuma tela foi auditada por este documento.
 
 ## Registro da execução
