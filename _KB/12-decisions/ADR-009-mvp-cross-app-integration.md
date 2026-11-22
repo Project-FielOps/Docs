@@ -16,6 +16,10 @@ Ampliar `GET /api/v1/mobile/sync/pull` como feed incremental autorizado após ca
 
 Criar ou ampliar uma consulta operacional como `GET /api/v1/users/assignable?role=TECHNICIAN|SUPERVISOR`, com escopo autorizado, usuários ativos, paginação, busca textual quando necessária e visibilidade conforme papel. `GET /users` permanece administrativo. A resposta operacional deve expor apenas dados necessários à atribuição. O contrato final de escopo e filtros precisa ser especificado e testado antes do consumo web.
 
+### Clarificação operacional do MVP — 2026-10-19
+
+Para o MVP, o workspace opera com uma única organização e sem vínculo persistido de usuário a cliente, local ou organização. Portanto, o escopo autorizado de `/users/assignable` é global dentro dessa organização única: ADMIN e SUPERVISOR podem consultar somente usuários `ACTIVE` com papel `TECHNICIAN` ou `SUPERVISOR`, conforme o parâmetro `role`. `ADMIN`, usuários inativos e papéis não atribuíveis não são retornados nem aceitos no agendamento. A consulta é paginada por `page`, `size` e `sort`; filtros de status não podem ampliar o conjunto e status diferente de `ACTIVE` retorna vazio. `GET /users` continua exclusivo da gestão administrativa. Um escopo por cliente/local exige decisão e modelo de dados próprios em evolução posterior.
+
 ## D03 — QR, GPS e política de localização
 
 Persistir contexto de execução próprio da inspeção, sem depender de metadados de evidência. Inspeção/template expõem `requiresLocation: boolean`; registrar equipamento esperado, método `QR_CODE|MANUAL`, QR lido quando houver, resultado `MATCH|MISMATCH|NOT_CHECKED`, coordenadas e instante da captura ou motivo de ausência. GPS é opcional por padrão; negar permissão deve ser registrado. QR divergente não confirma vínculo e existe alternativa manual. O schema, endpoint/operação de sync e semântica de `requiresLocation=true` ainda devem ser detalhados sem contrariar a continuidade da inspeção em caso de GPS indisponível definida em DEC-009.
