@@ -70,3 +70,15 @@ Validar login, refresh/logout, permissões, CORS, rotas após refresh, upload/do
 - S3: não apagar evidências automaticamente.
 
 Por ambiente, registrar data, commit, imagem, task definition, endpoint, versão Flyway, health check, alarmes e testes. Nunca registrar secrets ou tokens.
+
+## 5. Alternativa acadêmica: EC2 com Docker Compose
+
+Quando o AWS Academy não permitir ECR, OIDC ou criação de roles, a implantação mínima pode usar uma
+EC2 com Docker Compose: API e PostgreSQL no Compose da API, e a interface Angular no container Nginx.
+O PostgreSQL deve permanecer sem porta pública; a aplicação expõe somente HTTP/HTTPS por um proxy e
+SSH restrito para operação. O CI pode validar e entregar por SSH usando secrets do GitHub, sem colocar
+credenciais AWS no repositório.
+
+Essa alternativa é adequada para demonstração controlada. Para produção, manter a topologia aprovada
+com RDS, S3 privado, Secrets Manager, CloudWatch, ECR, ALB e CloudFront, desde que esses recursos e
+permissões estejam comprovadamente disponíveis.

@@ -23,6 +23,20 @@ checkout → Node → npm ci → testes → build → S3 → invalidação Cloud
 
 O bundle não pode conter secrets, credenciais AWS, JWT ou senhas.
 
+O workflow da interface também valida testes, Prettier, build de produção e a construção da imagem
+Docker. A publicação em S3/CloudFront ainda depende de credenciais, domínio e recursos provisionados.
+
+### AWS Academy / EC2
+
+O Learner Lab pode restringir criação de roles IAM, provedor OIDC, ECR e outros serviços. Para uma
+implantação acadêmica em EC2, o caminho compatível é executar o CI no GitHub Actions e fazer a etapa
+de entrega por SSH para uma EC2 previamente preparada, usando secrets do GitHub para host, usuário,
+porta e chave privada. Esse caminho não exige armazenar credenciais AWS de longa duração no workflow.
+
+Quando OIDC e IAM forem liberados pelo ambiente, a alternativa preferida é uma role de deploy com
+trust limitado ao repositório e à branch de publicação. Não usar `LabRole` como substituto automático
+de uma role de CI sem confirmar as permissões do laboratório.
+
 ## Branches e promoção
 
 - Pull request: testes e build, sem deploy.
@@ -62,4 +76,7 @@ Depois, subir a API e o frontend localmente e validar login, refresh/logout, aut
 
 ## Estado atual
 
-O workspace agora contém o workflow inicial de CI da API em `API/.github/workflows/ci.yml`, com Java 21, `mvn clean verify`, artefato JAR e build da imagem Docker. A execução remota ainda precisa ser validada no GitHub Actions. Não há IaC provisionada, CD AWS ou ambiente publicado; antes dessas etapas, confirmar conta, região, domínios, estratégia de IaC e ambiente-alvo.
+O workspace contém workflows de CI da API e da interface em `API/.github/workflows/ci.yml` e
+`interface-administrativa/.github/workflows/ci.yml`. Eles executam testes/build e constroem as imagens,
+mas ainda não publicam em registry nem fazem deploy. Não há IaC provisionada, CD AWS ou ambiente
+publicado; antes dessas etapas, confirmar conta, região, domínios, estratégia de IaC e ambiente-alvo.
