@@ -1,0 +1,4 @@
+interface:
+  display_name: "FieldOps Senior Web QA"
+  short_description: "Valida design, Angular, acessibilidade e API"
+  default_prompt: "Use $fieldops-web-qa-agent para validar independentemente esta mudança web FieldOps contra o design system, os requisitos e a integração real com a API."

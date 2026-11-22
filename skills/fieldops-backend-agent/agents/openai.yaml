@@ -1,0 +1,4 @@
+interface:
+  display_name: "FieldOps Backend Agent"
+  short_description: "Implementa o backend conforme os requisitos"
+  default_prompt: "Use $fieldops-backend-agent para planejar e implementar esta alteração no backend FieldOps."
