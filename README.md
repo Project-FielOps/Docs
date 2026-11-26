@@ -1,6 +1,6 @@
 # Docs — Projeto FieldOps
 
-Esta é a documentação versionada do FieldOps. A fonte atual para humanos e agentes de IA é `_KB/`. O código vive em `API/` e `interface-administrativa/`; o app mobile ainda é uma frente planejada.
+Esta é a documentação versionada do FieldOps. A fonte atual para humanos e agentes de IA é `_KB/`. O código vive em `API/`, `interface-administrativa/` e `aplicativo-mobile/` (Expo, offline-first com SQLite e sync idempotente). Limitações em aberto: [`_KB/11-planning/known-limitations.md`](_KB/11-planning/known-limitations.md).
 
 ## Roteiro de leitura
 

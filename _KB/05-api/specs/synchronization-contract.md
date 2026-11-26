@@ -1,16 +1,17 @@
 # Especificação de sincronização
 
-**Status:** contrato MVP aprovado e implementado no backend em 2026-09-06.
+**Status:** contrato MVP implementado no backend (2026-09-06) e no app mobile; revisado em 2026-11-26 (transação por operação, NC offline, upload idempotente e feed de mudanças do servidor).
 
 ## Contrato escolhido
 
 - `POST /api/v1/mobile/sync/push`: recebe `deviceId`, operações ordenadas por dependência e `operationId` único; responde resultado individual `APPLIED`, `ALREADY_APPLIED`, `REJECTED`, `CONFLICT` ou `DEPENDENCY_FAILED`.
 - `GET /api/v1/mobile/sync/pull?cursor={cursor}`: retorna alterações autorizadas e `nextCursor`; o cliente só persiste o lote e depois avança o cursor.
-- Upload de evidência ocorre separadamente, com metadados idempotentes, estado de arquivo e confirmação antes de considerar evidência obrigatória entregue.
+- Upload de evidência ocorre separadamente em `POST /inspections/{id}/evidence` (multipart) com `operationId` (idempotente: reenvio devolve `200` com a mesma evidência, inclusive após o envio da inspeção) e vínculo por `inspectionItemId` (resposta do item) ou `nonConformityOperationId` (NC criada offline).
+- O `pull` entrega ao técnico as mudanças das inspeções dele feitas em qualquer lugar: `entityType = Inspection` com `payload.event` em `ASSIGNED`, `UNASSIGNED`, `CANCELED`, `STARTED`, `SUBMITTED`, `REOPENED_FOR_CORRECTION`, `UNDER_REVIEW`, `APPROVED`, `REJECTED`, além de respostas e NCs aplicadas por push.
 
 ## Payload e limites do MVP
 
-`push` recebe no máximo 50 operações e 1 MB por requisição; cada operação pode ter até 256 KB e no máximo 10 dependências. O `attempt` é opcional, começa em 1 e aceita no máximo 5. As operações suportadas no backend são `ANSWER_UPSERT`, `INSPECTION_START`, `INSPECTION_SUBMIT` e `INSPECTION_REOPEN_CORRECTION`.
+`push` recebe no máximo 50 operações e 1 MB por requisição; cada operação pode ter até 256 KB e no máximo 10 dependências. O `attempt` é opcional, começa em 1 e aceita no máximo 5. As operações suportadas no backend são `ANSWER_UPSERT`, `INSPECTION_START`, `INSPECTION_SUBMIT`, `INSPECTION_REOPEN_CORRECTION` e `NON_CONFORMITY_CREATE` (payload `CreateNonConformityRequest`; idempotente pelo `operationId`, que fica gravado em `non_conformity.client_operation_id`). Cada operação roda na própria transação: uma recusa não desfaz as demais do lote. Recusas por permissão voltam `REJECTED`/`FORBIDDEN_SCOPE` na operação, não 403 no lote. O `payload` de transições é `{id, status, version}`.
 
 ```json
 {
@@ -45,4 +46,4 @@ O servidor só confirma conclusão/submissão quando respostas obrigatórias, ob
 
 ## Limitações conhecidas
 
-O app mobile e sua SQLite/outbox ainda não fazem parte deste repositório. A implementação backend mantém conflitos consultáveis por resultado da operação e preserva os dados locais por não descartá-los; a decisão administrativa entre manter servidor ou aceitar envio continua sendo responsabilidade da evolução de resolução de conflitos. Upload privado permanece separado do push.
+O app mobile (`aplicativo-mobile`) implementa SQLite/outbox, ordem por fase, backoff e preservação de conflitos (ver README do app). A implementação backend mantém conflitos consultáveis por resultado da operação e preserva os dados locais por não descartá-los; a decisão administrativa entre manter servidor ou aceitar envio continua sendo responsabilidade da evolução de resolução de conflitos. Upload privado permanece separado do push.

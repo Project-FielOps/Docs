@@ -40,9 +40,9 @@ Use `BLOCKED` somente quando a dependência estiver claramente identificada e n�
 | FO-004 | Dashboard, listas e filtros reais | P0/P1 | DONE | [FO-004.md](FO-004.md) |
 | FO-005 | Recuperação e troca de senha | P0 | DONE | [FO-005.md](FO-005.md) |
 | FO-006 | Qualidade frontend, acessibilidade e regressão visual | P0 | DONE | [FO-006.md](FO-006.md) |
-| FO-007 | Persistência offline do mobile | P0 | BLOCKED | [FO-007.md](FO-007.md) |
-| FO-008 | Sync incremental, NC e conflitos | P0 | BLOCKED | [FO-008.md](FO-008.md) |
-| FO-009 | QR, GPS e evidências idempotentes | P0 | BLOCKED | [FO-009.md](FO-009.md) |
+| FO-007 | Persistência offline do mobile | P0 | DONE | [FO-007.md](FO-007.md) |
+| FO-008 | Sync incremental, NC e conflitos | P0 | DONE | [FO-008.md](FO-008.md) |
+| FO-009 | QR, GPS e evidências idempotentes | P0 | VALIDATION | [FO-009.md](FO-009.md) |
 | FO-010 | Autorização e proteção de dados/evidências | P0 | READY | [FO-010.md](FO-010.md) |
 | FO-011 | Integração E2E da jornada vertical | P0 | BLOCKED | [FO-011.md](FO-011.md) |
 | FO-012 | Publicação e operação do frontend | P1 | BLOCKED | [FO-012.md](FO-012.md) |
