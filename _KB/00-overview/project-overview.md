@@ -75,14 +75,14 @@ O material original descreve como fora do MVP elementos como:
 A implementação presente no repositório confirma parte do MVP em backend e painel administrativo, mas não a totalidade do escopo previsto na base documental. Em especial:
 
 - a API e o painel administrativo estão implementados;
-- o mobile está planejado e faz parte do MVP funcional;
-- a sincronização offline não está implementada como parte de um contrato concluído;
+- o app mobile está implementado (Expo) e faz parte do MVP funcional;
+- a sincronização offline está implementada: outbox SQLite, push/pull idempotentes e upload idempotente de evidências;
 - AWS e storage de objetos são requisitos obrigatórios da arquitetura desejada, mas sua implementação real ainda exige definição técnica.
 
 ## Separação AS-IS vs TO-BE
 
-- AS-IS: backend e administração implementados no repositório.
-- TO-BE: mobile, sincronização offline, storage em objeto, infraestrutura AWS e dados de produção em cloud.
+- AS-IS: API, painel e app mobile implementados; sincronização offline idempotente; API e painel publicados em EC2 (AWS Academy) com PostgreSQL em contêiner.
+- TO-BE: evidências em S3, HTTPS e resolução assistida de conflitos.
 
 ## Fontes
 
