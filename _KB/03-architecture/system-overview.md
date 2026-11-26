@@ -11,7 +11,7 @@ Painel administrativo (Angular) ─────────┘                  
                                               PostgreSQL + evidências em objeto
 ```
 
-O repositório contém a API em `../API/` e o painel em `../interface-administrativa/`. O app mobile continua uma frente planejada; sua implementação não está presente neste workspace.
+A organização contém a API (`API`), o painel (`interface-administrativa`) e o app do técnico (`aplicativo-mobile`). O app grava tudo primeiro no SQLite (outbox) e sincroniza pelo contrato [`/mobile/sync`](../05-api/specs/synchronization-contract.md).
 
 ## Limites e fontes de verdade
 
